@@ -14,21 +14,21 @@ Mythologie est un projet open-source.
 # Liste des Contributeurs classés par domaine d'action :
 
 Reprise d'antériorité et creation des DTD :
-	Sylvie Ranga
-	Julian Demarest
-	Mario Elias
-	Omer Bakrim
+	Sylvie Ranga,
+	Julian Demarest,
+	Mario Elias,
+	Omer Bakrim,
 	Jonathan Barbin
 
 Mise en place du serveur Xedix et Intégration des données :
-	Souleyman Keita @felila
-	Robin Vasseur
+	Souleyman Keita,
+	Robin Vasseur,
 	Anthony RataGobal
 
 Création de l'interface utilisateurs
-	Aurélien Geant
-	Angélo Lima @Geminicode
-	Vincent Texier @Co-Li
+	Aurélien Geant,
+	Angélo Lima, 
+	Vincent Texier
 
 
 
