@@ -1,4 +1,4 @@
-#1 Description
+# Description
 
 Mytho est l'implémentation du projet d'entrepôt de données de l'association mythologie française.
 
@@ -11,21 +11,21 @@ Mytho offrira
 Mythologie est un projet open-source.
 
 
-#2 Liste des Contributeurs classés par domaine d'action :
+# Liste des Contributeurs classés par domaine d'action :
 
-#3 Reprise d'antériorité et creation des DTD :
+Reprise d'antériorité et creation des DTD :
 	Sylvie Ranga
 	Julian Demarest
 	Mario Elias
 	Omer Bakrim
 	Jonathan Barbin
 
-#3 Mise en place du serveur Xedix et Intégration des données :
+Mise en place du serveur Xedix et Intégration des données :
 	Souleyman Keita @felila
 	Robin Vasseur
 	Anthony RataGobal
 
-#3 Création de l'interface utilisateurs
+Création de l'interface utilisateurs
 	Aurélien Geant
 	Angélo Lima @Geminicode
 	Vincent Texier @Co-Li
