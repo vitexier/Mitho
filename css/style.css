@@ -1,4 +1,6 @@
-
+body{
+	background-image: url('../images/beige2.GIF');
+}
 
 
   .btn,.drawer { margin-bottom:10px; }
