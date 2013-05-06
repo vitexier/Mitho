@@ -1,11 +1,8 @@
 <?php
 
-function page(){
-	$path_parts = pathinfo($_SERVER['REQUEST_URI']);
-
-	if($path_parts['basename'] == "admin"){
+function pageAdmin(){
+	
 		if(!empty($_GET['page'])){
-
 
 			switch ($_GET['page']) {
 				case "acceuil" :
@@ -25,16 +22,20 @@ function page(){
 					break;	
 			}	
 
-		}
-	}else{
-		if(empty($_GET['page'])){
-
 		}else{
-			include("../modules/acceuil/index.php");
-		
-		}
-	}	
+			include("acceuil/index.php");
+		}	
 }
+
+/*function auth(){
+	if($_SESSION['login'] == null ){
+		header ('location: auth/index.php');
+	}else if(!empty($_POST['login']){
+		session_start();
+		$_SESSION['login'] = $_POST['login'];
+	}
+	
+}/*
 
 
 

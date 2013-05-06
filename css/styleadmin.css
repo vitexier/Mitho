@@ -1,0 +1,17 @@
+  .btn,.drawer { margin-bottom:10px; }
+  .drawer { text-align: center; }
+  h1.lead { border-bottom: 1px dotted #ccc; margin-bottom: 30px; }
+  h4.lead { margin-bottom:10px; }
+  #icon_map ul li { font-size: 16px; }
+  .smallify { font-size: 13px; }
+
+footer {
+    
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    color: white;
+    text-align: center;
+    background: #4a4d50;
+
+}
