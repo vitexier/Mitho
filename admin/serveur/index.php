@@ -1,20 +1,33 @@
-<h2 class="lead">Gestion du serveur</h2>
+<h2 class="lead">Paramétrage du serveur</h2>
 <div class="row">
-  <div class="twelve columns">
-    <section class="vertical tabs">
-      <ul class="tab-nav three columns"><li><a href="#">Partie 1</a></li>
-        <li class="active"><a href="#">Partie 2</a></li>
-        <li><a href="#">Partie 3</a></li>
-      </ul>
-      <div class="tab-content eight columns">
-        <p>Contenu de la partie 1</p>
-      </div>
-      <div class="tab-content eight columns active">
-        <p>Contenu de la partie 2</p>
-      </div>
-      <div class="tab-content eight columns">
-        <p>Contenu de la partie 3</p>
-      </div>
-      </section>
+  <form>
+ 
+    <div class="twelve columns">
+  <form>
+     <ul class="twelve columns">
+      <li class="field">
+        <input class="text input" type="text" placeholder="Url base" />
+      </li>
+      <li class="field">
+        <input class="text input" type="text" placeholder="Adresse ip server" />
+      </li>
+            <li class="field">
+        <input class="text input" type="text" placeholder="Port server" />
+      </li>
+       <li class="field">
+        <div class="picker">
+          <select >
+            <option value="#" disabled>Selectionné un serveur</option>
+            <option>XEDIX ROXOR</option>
+            <option>Mysql</option>
+          </select>
+        </div>
+      </li>
+      <li class="field">
+        <input name="submit" type="submit" class="medium danger btn">
+      </li>
+    </ul>
+  </form>
     </div>
+  </form>
 </div>

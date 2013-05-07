@@ -32,5 +32,21 @@ $(document).ready(function() {
 	$("#closeNotice").click(function (event){
 		$("#notice").fadeOut("slow");
 	});
+
+	
 	
 });
+
+function authentification(){
+		$.ajax( {
+		            type: "GET",
+		            url: "http://82.234.92.81:5225/cgi-bin/client?X2Admin+13++login=Robin&pwd=854895",
+		            dataType: "text/xml",
+		            
+		        }
+		      ).done(function( msg ) {
+					console.log( "Data Saved: " + msg );
+				});
+	}
+
+

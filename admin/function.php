@@ -17,6 +17,12 @@ function pageAdmin(){
 				case "utilisateurs" : 	
 					include("utilisateurs/index.php");
 					break;
+				case "editContenu" : 	
+					include("editContenu/index.php");
+					break;	
+				case "logout" : 	
+					include("logout/index.php");
+					break;		
 				default: 
 					include("404/index.php");
 					break;	
@@ -27,15 +33,12 @@ function pageAdmin(){
 		}	
 }
 
-/*function auth(){
-	if($_SESSION['login'] == null ){
-		header ('location: auth/index.php');
-	}else if(!empty($_POST['login']){
-		session_start();
-		$_SESSION['login'] = $_POST['login'];
+function auth(){
+	if(!isset($_SESSION)){
+		header ('location: http://localhost/Mitho/admin/auth/index.php');
 	}
 	
-}/*
+}
 
 
 

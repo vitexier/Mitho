@@ -1,6 +1,6 @@
 <?php 
   include("function.php"); 
-  //auth();
+  auth();
 ?>
 
 <!doctype html>
@@ -39,8 +39,16 @@
       <a class="toggle" gumby-trigger=".navbar > .row > ul" href="#"><i class="icon-menu"></i></a>
       <h3 class="four columns logo" style="font-family:titre !important; color : white">Administration</h3>
       <ul class="eight columns">
-        <li><a href="?page=acceuil">Acceuil</a></li>
-        <li><a href="?page=contenu" >gestion des pages</a></li>
+        <li><a href="?page=acceuil">Tableau de bord</a></li>
+        <li><a href="?page=contenu" >Gestion des contenus</a>
+          <div class="dropdown">
+            <ul>
+              <li><a href="?page=lieux">Gestion des lieux</a></li>
+              <li><a href="?page=collectages">Gestion des collectages</a></li>
+              <li><a href="?page=biblio">Gestion bibliographique</a></li>
+            </ul>
+          </div>
+        </li>
         <li><a href="?page=utilisateurs" >Utilisateurs</a></li>
         <li><a href="?page=serveur">Serveur</a></li>
       </ul>

@@ -26,6 +26,9 @@
   <link rel="stylesheet" href="../../css/base.css">
   <link rel="stylesheet" href="../../css/skeleton.css">
   <link rel="stylesheet" href="../../css/layout.css">
+    <!-- JS  -->
+  <script src="../../js/libs/jquery-1.8.3.min.js"></script>
+  <script src="../../js/app.js"></script>
   
 </head>
 <body>
@@ -33,7 +36,7 @@
 
   <div class="container">
     <div class="form-bg">
-      <form onsubmit="#">
+      
         <h2>Authentification</h2>
         <p><input type="text" placeholder="Username"/></p>
         <p><input type="password" placeholder="Password"/></p>
@@ -41,8 +44,8 @@
           <input type="checkbox" id="remember" value="remember" />
           <span>Se souvenir de moi</span>
         </label>
-        <button type="submit"></button>
-      </form>
+        <button onclick="authentification();"></button>
+      
     </div>
 
   
@@ -51,9 +54,7 @@
 
   </div><!-- container -->
 
-  <!-- JS  -->
-  <script src="../../js/libs/jquery-1.8.3.min.js"></script>
-  <script src="../../js/app.js"></script>
+
   
 <!-- End Document -->
 </body>
