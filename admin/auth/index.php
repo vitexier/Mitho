@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../../css/layout.css">
     <!-- JS  -->
   <script src="../../js/libs/jquery-1.8.3.min.js"></script>
-  <script src="../../js/app.js"></script>
+  <script src="../../js/main.js"></script>
   
 </head>
 <body>
@@ -44,7 +44,7 @@
           <input type="checkbox" id="remember" value="remember" />
           <span>Se souvenir de moi</span>
         </label>
-        <button onclick="authentification();"></button>
+        <button id="auth_button" ></button>
       
     </div>
 

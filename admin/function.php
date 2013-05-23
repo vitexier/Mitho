@@ -22,6 +22,9 @@ function pageAdmin(){
 					break;	
 				case "logout" : 	
 					include("logout/index.php");
+					break;
+				case "editUtilisateur" : 	
+					include("editUtilisateur/index.php");
 					break;		
 				default: 
 					include("404/index.php");
