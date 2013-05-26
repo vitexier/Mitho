@@ -39,20 +39,19 @@
 	});
 
 		$("#auth_button").click(function(){
-
+			console.log("http://localhost/Mitho/admin/xedix.php?id=1&login="+$('#login').val()+"&mdp="+$('#mdp').val());
 			if($("#login").val() === "" || $("#mdp").val() === ""){
 				alert("vide");
 			}else{
 				$.ajax( {
-				    type: "POST",
-				    url: "../auth.php",
-				    data: 'login='+$("#login").val()+"&mdp="+$("#mdp").val(),
+				    type: "GET",
+				    url: "http://localhost/Mitho/admin/xedix.php?id=1&login="+$('#login').val()+"&mdp="+$('#mdp').val(),
 				    dataType: "xml",
 				    success : function(xml){
-				    	console.log("fichier récupéré " + xml);
-				    	location.reload(true);
+				    	console.log("sucess");
 				    },
-				    error: console.log("erreur")
+				    error: 
+				    	console.log("erreur")
 				});
 			}
 
