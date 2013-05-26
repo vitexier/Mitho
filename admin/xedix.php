@@ -58,8 +58,9 @@ function auth(){
         //$session = $dom->getElementsByTagName('id');
         /*foreach($session as $i){
             $idSession = $i->nodeValue . "<br />";
-        }
-        $_SESSION['idSession'] = $idSession;*/
+        }*/
+        $_SESSION['idSession'] = "toto";
+        header ('location: http://localhost/Mitho/admin/');
     }
     
 
