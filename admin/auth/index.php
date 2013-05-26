@@ -1,4 +1,4 @@
-<?php include("../functions.php"); ?>
+<?php include("../function.php");?>
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
@@ -38,8 +38,8 @@
     <div class="form-bg">
       
         <h2>Authentification</h2>
-        <p><input type="text" placeholder="Username"/></p>
-        <p><input type="password" placeholder="Password"/></p>
+        <p><input type="text" placeholder="Username" id="login"/></p>
+        <p><input type="password" placeholder="Password" id="mdp"/></p>
         <label for="remember">
           <input type="checkbox" id="remember" value="remember" />
           <span>Se souvenir de moi</span>

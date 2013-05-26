@@ -39,16 +39,24 @@
 	});
 
 		$("#auth_button").click(function(){
-			$.ajax( {
-			    type: "GET",
-			    url: "http://localhost/Mitho/admin/auth.php",
-			    dataType: "xml",
-			    success : function(xml){
-			    	console.log("fichier récupéré " + xml);
-			    	location.reload(true);
-			    },
-			    error: console.log("erreur")
-			});
+
+			if($("#login").val() === "" || $("#mdp").val() === ""){
+				alert("vide");
+			}else{
+				$.ajax( {
+				    type: "POST",
+				    url: "../auth.php",
+				    data: 'login='+$("#login").val()+"&mdp="+$("#mdp").val(),
+				    dataType: "xml",
+				    success : function(xml){
+				    	console.log("fichier récupéré " + xml);
+				    	location.reload(true);
+				    },
+				    error: console.log("erreur")
+				});
+			}
+
+			
 		});
 
 	});
