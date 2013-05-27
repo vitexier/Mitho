@@ -49,9 +49,12 @@
 				    dataType: "xml",
 				    success : function(xml){
 				    	console.log("sucess");
+				    	var erreur = $(xml).find('erreur').text();
+				    	console.log("erreur " + erreur);
 				    },
-				    error: 
-				    	console.log("erreur")
+				    error: function (error) {
+				    	console.log("erreur");
+				    }
 				});
 			}
 
