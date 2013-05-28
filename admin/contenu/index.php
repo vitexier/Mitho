@@ -5,9 +5,9 @@
     <section class="vertical tabs">
       <ul class="tab-nav three columns">
         <li class="active"><a href="#">Non publiés</a></li>
-        <li c><a href="#">En cours de rédaction</a></li>
-        <li><a href="#">En cours de modération</a></li>
-        <li><a href="#">Publié</a></li>
+        <li ><a id="inRedaction" href="#">En cours de rédaction</a></li>
+        <li><a id="inModeration" href="#">En cours de modération</a></li>
+        <li><a id="inPublished" href="#">Publié</a></li>
 
       </ul>
       <div class="tab-content eight columns active">
@@ -32,82 +32,7 @@
                             Action
                         </td>
                     </tr>
-                    <tr>
-
-                        <td>
-                            Row 1
-                        </td>
-                        <td>
-                            Row 1
-                        </td>
-                        <td>
-                            Row 1
-                        </td>
-                        <td>
-                            Row 1
-                        </td>  
-                        <td>
-                           <i class="icon-search"></i><i class="icon-pencil"></i><i class="icon-cancel"></i><i class="icon-check"></i>
-                        </td>                                                 
-                    </tr>
-                    <tr>
-
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Row 2
-                        </td>   
-                        <td>
-                            Row 2
-                        </td>  
-                        <td>
-                            Dép.
-                        </td>                   
-                    </tr>
-                    <tr>
-
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Row 2
-                        </td> 
-                        <td>
-                            Dép.
-                        </td>                     
-                    </tr>
-                    <tr>
-
-                        <td>
-                            Row 3
-                        </td>
-                        <td>
-                            Row 3
-                        </td>
-                       <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Row 2
-                        </td> 
-                        <td>
-                            Dép.
-                        </td>  
-
-                    </tr>
-                    <tr >
-                      <td colspan="5" align="center"><i class="icon-to-start"></i> 1/1 <i class="icon-to-end"></i></td>
-                    </tr>
+                    
                 </table>
             </div>
             <br>
@@ -132,81 +57,7 @@
                             Action
                         </td>
                     </tr>
-                    <tr>
-
-                        <td>
-                            Row 1
-                        </td>
-                        <td>
-                            Row 1
-                        </td>
-                        <td>
-                            Dép.
-                        </td>
-                        <td>
-                            Row 1
-                        </td>  
-                        <td>
-                            Row 1
-                        </td>                       
-                    </tr>
-                    <tr>
-
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Dép.
-                        </td>
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Row 1
-                        </td>                         
-                    </tr>
-                    <tr>
-
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Dép.
-                        </td>
-                        <td>
-                            Row 2
-                        </td> 
-                        <td>
-                            Row 1
-                        </td>                        
-                    </tr>
-                    <tr>
-
-                        <td>
-                            Row 3
-                        </td>
-                        <td>
-                            Dép.
-                        </td>
-                        <td>
-                            Row 3
-                        </td>
-                        <td>
-                            Row 3
-                        </td> 
-                        <td>
-                            Row 1
-                        </td>                        
-                    </tr>
-                    <tr >
-                      <td colspan="5" align="center"><i class="icon-to-start"></i> 1/1 <i class="icon-to-end"></i></td>
-                    </tr>
+                    
                 </table>
             </div>
       </div>
@@ -230,81 +81,7 @@
                             Action
                         </td>
                     </tr>
-                    <tr>
-
-                        <td>
-                            Row 1
-                        </td>
-                        <td>
-                            Row 1
-                        </td>
-                        <td>
-                            Dép.
-                        </td>
-                        <td>
-                            Row 1
-                        </td>    
-                        <td>
-                            Row 1
-                        </td>                     
-                    </tr>
-                    <tr>
-
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Dép.
-                        </td>
-                        <td>
-                            Row 2
-                        </td>  
-                        <td>
-                            Row 1
-                        </td>                       
-                    </tr>
-                    <tr>
-
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Row 2
-                        </td> 
-                        <td>
-                            Dép.
-                        </td> 
-                        <td>
-                            Row 1
-                        </td>                       
-                    </tr>
-                    <tr>
-
-                        <td>
-                            Row 3
-                        </td>
-                        <td>
-                            Row 3
-                        </td>
-                        <td>
-                            Dép.
-                        </td>
-                        <td>
-                            Row 3
-                        </td>  
-                        <td>
-                            Row 1
-                        </td>                       
-                    </tr>
-                    <tr >
-                      <td colspan="5" align="center"><i class="icon-to-start"></i> 1/1 <i class="icon-to-end"></i></td>
-                    </tr>
+                    
                 </table>
             </div>
       </div>
@@ -328,82 +105,7 @@
                         <td>
                             Action
                         </td>
-                    </tr>
-                    <!--<tr>
-     
-                        <td>
-                            Row 1
-                        </td>
-                        <td>
-                            Row 1
-                        </td>
-                        <td>
-                            Dép.
-                        </td>
-                        <td>
-                            Row 1
-                        </td>  
-                        <td>
-                            Row 1
-                        </td>                       
-                    </tr>
-                    <tr>
-         
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Dép.
-                        </td>
-                        <td>
-                            Row 2
-                        </td>   
-                        <td>
-                            Row 1
-                        </td>                      
-                    </tr>
-                    <tr>
-         
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Row 2
-                        </td>
-                        <td>
-                            Row 2
-                        </td> 
-                        <td>
-                            Dép.
-                        </td> 
-                        <td>
-                            Row 1
-                        </td>                       
-                    </tr>
-                    <tr>
-        
-                        <td>
-                            Row 3
-                        </td>
-                        <td>
-                            Row 3
-                        </td>
-                        <td>
-                            Dép.
-                        </td>
-                        <td>
-                            Row 3
-                        </td>   
-                        <td>
-                            Row 1
-                        </td>                      
-                    </tr>
-                    <tr >
-                      <td colspan="5" align="center"><i class="icon-to-start"></i> 1/1 <i class="icon-to-end"></i></td>
-                    </tr>-->                    
+                    </tr>                   
                 </table>
             </div>
       </div>

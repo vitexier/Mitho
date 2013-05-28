@@ -89,7 +89,7 @@
     </avis>
     <dateDerniereModif anneeDerniereModif="2012" jourDerniereModif="1" moisDerniereModif="2"/>
     <dateCreation anneeCreation="2012" jourCreation="1" moisCreation="2"/>
-    <etat/>
+    <etat>nonpublié</etat>
   </Conte>
     <Conte>
     <id dateID="03-04-2013" type="mythe">mythe_03-04-2013_003254678523654</id>
@@ -186,6 +186,6 @@
     <avis/>
     <dateDerniereModif/>
     <dateCreation anneeCreation="" jourCreation="" moisCreation=""/>
-    <etat/>
+    <etat>redaction</etat>
   </Conte>
 </Contes>
