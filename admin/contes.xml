@@ -2,7 +2,7 @@
 <!DOCTYPE Conte SYSTEM "conte-ver-full.dtd" >
 <Contes>
   <Conte>
-    <id dateID="03-04-2013" type="conte">id</id>
+    <id dateID="03-04-2013" type="conte">conte_03-04-2013_123456789754</id>
     <titre>La fée fagot</titre>
     <resume>Elle exosse tous les voeux</resume>
     <lieu>
@@ -37,33 +37,55 @@
     </collectage>
     <refConteType>1</refConteType>
     <images>
-      <description>
+      <image>
+        <description>
 
-      </description>
-      <auteur>
-      
-      </auteur>  
-      <src>
-      
-      </src>       
+        </description>
+        <auteur>
+        
+        </auteur>  
+        <src>
+        
+        </src>
+      </image>
+      <image>
+        <description>
+
+        </description>
+        <auteur>
+        
+        </auteur>  
+        <src>
+        
+        </src>
+      </image>        
     </images>
-      <description>
-
-      </description>
-      <auteur>
-      
-      </auteur>  
-      <src>
-      
-      </src>
     <medias/>
     <avis>
         <note>
           blablabla :D
         </note>
+        
         <personne>
-          toto
+            <nom>
+              roco
+            </nom>
+            <prenom>
+              armand
+            </prenom>
+            <email>
+              roco.armand@gmail.com
+            </email>
+            <adresse>
+              <numero>
+                8
+              </numero>
+              <rue>
+                avenue de la gare 
+              </rue>
+            </adresse>
         </personne>
+        
     </avis>
     <dateDerniereModif anneeDerniereModif="2012" jourDerniereModif="1" moisDerniereModif="2"/>
     <dateCreation anneeCreation="2012" jourCreation="1" moisCreation="2"/>

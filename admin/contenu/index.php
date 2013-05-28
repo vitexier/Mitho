@@ -12,7 +12,7 @@
       </ul>
       <div class="tab-content eight columns active">
         <div class="tableMytho" >
-                <table >
+                <table id="tabNotPublished">
                     <tr>
 
                         <td >
@@ -114,7 +114,7 @@
       </div>
       <div class="tab-content eight columns ">
                 <div class="tableMytho" >
-                <table >
+                <table id="tabRedaction">
                     <tr>
 
                         <td >
@@ -212,7 +212,7 @@
       </div>
       <div class="tab-content eight columns">
                 <div class="tableMytho" >
-                <table >
+                <table id="tabModeration">
                     <tr>
  
                         <td >
