@@ -310,9 +310,8 @@
       </div>
       <div class="tab-content eight columns">
                 <div class="tableMytho" >
-                <table >
+                <table id="tabPublished">
                     <tr>
-
                         <td >
                             Titre <i class="icon-down-dir"></i>
                         </td>
@@ -330,7 +329,7 @@
                             Action
                         </td>
                     </tr>
-                    <tr>
+                    <!--<tr>
      
                         <td>
                             Row 1
@@ -404,7 +403,7 @@
                     </tr>
                     <tr >
                       <td colspan="5" align="center"><i class="icon-to-start"></i> 1/1 <i class="icon-to-end"></i></td>
-                    </tr>                    
+                    </tr>-->                    
                 </table>
             </div>
       </div>

@@ -49,6 +49,7 @@
 				    dataType: "xml",
 				    success : function(xml){
 				    	console.log("sucess");
+
 				    	var erreur = $(xml).find('erreur').text();
 				    	console.log("erreur " + erreur);
 				    },
@@ -59,6 +60,34 @@
 			}
 
 			
+		});
+
+		$("#tabPublished").ready(function(){
+			/**
+
+
+http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fichier-xml/
+
+			*/
+			$.ajax( {
+				    type: "GET",
+				    url: "http://localhost/Mitho/admin/xedix.php?id=2",
+				    dataType: "xml",
+				    success : function(xml){
+				    	//console.log(xml);
+				    	
+				    	$(this).find('Conte').each(function(){
+                            var titre = $(this).find('titre').text();
+                            var dep = $(this).find('lieu').find('departement').text();
+ 							console.log(titre);
+ 							console.log(dep);
+                        });
+                         
+				    },
+				    error: function (error) {
+				    	console.log("erreur");
+				    }
+			});
 		});
 
 	});
