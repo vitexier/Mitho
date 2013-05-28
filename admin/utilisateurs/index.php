@@ -11,6 +11,9 @@
           <div class="tableMytho" >
                 <table  id="tabUsers">
                     <tr>
+                        <td >
+                            Pseudo <i class="icon-down-dir"></i>
+                        </td>
 
                         <td >
                             Nom <i class="icon-down-dir"></i>
@@ -38,6 +41,9 @@
           <div class="tableMytho" >
                 <table  id="tabUsersAdmins">
                     <tr>
+                        <td >
+                            Pseudo <i class="icon-down-dir"></i>
+                        </td>
 
                        <td >
                             Nom <i class="icon-down-dir"></i>
@@ -66,6 +72,9 @@
 <div class="tableMytho" >
                 <table id="tabUsersRedactors" >
                     <tr>
+                        <td >
+                            Pseudo <i class="icon-down-dir"></i>
+                        </td>
 
                         <td >
                             Nom <i class="icon-down-dir"></i>
@@ -94,6 +103,9 @@
 <div class="tableMytho" >
                 <table id="tabUsersPublishers" >
                     <tr>
+                        <td >
+                            Pseudo <i class="icon-down-dir"></i>
+                        </td>
                         <td >
                             Nom <i class="icon-down-dir"></i>
                         </td>

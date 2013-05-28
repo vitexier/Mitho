@@ -93,6 +93,7 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 				    	console.log(xmlUsers);
 				    	
 				    	$(xmlUsers).find('personne').each(function(){
+				    		var pseudo = $(this).find('pseudo').text();
                             var nom = $(this).find('nom').text();
                             var prenom = $(this).find('prenom').text();
                             var adresse = $(this).find('adresse').text();
@@ -100,11 +101,11 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
                             var role = $(this).find('role').text();
                             var action = "<i class='icon-pencil'></i><i class='icon-cancel'></i><i class='icon-check'></i>";
 
-                            $("#tabUsers").append("<tr><td>"+nom+"</td><td>"+prenom+"</td><td>"+adresse+"</td><td>"+email+"</td><td>"+role+"</td></td><td>"+action+"</td></tr>");
+                            $("#tabUsers").append("<tr><td>"+pseudo+"</td><td>"+nom+"</td><td>"+prenom+"</td><td>"+adresse+"</td><td>"+email+"</td><td>"+role+"</td></td><td>"+action+"</td></tr>");
     
                         });
 
-                        $("#tabUsers").append("<tr ><td colspan='6' align='center'><i class='icon-to-start'></i> 1/1 <i class='icon-to-end'></i></td>");
+                        $("#tabUsers").append("<tr ><td colspan='7' align='center'><i class='icon-to-start'></i> 1/1 <i class='icon-to-end'></i></td>");
 
                          
 				    },
@@ -119,6 +120,7 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 
 			
 			$(xmlUsers).find('personne').each(function(){
+				var pseudo = $(this).find('pseudo').text();
 	            var nom = $(this).find('nom').text();
 	            var prenom = $(this).find('prenom').text();
 	            var adresse = $(this).find('adresse').text();
@@ -126,14 +128,14 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 	            var role = $(this).find('role').text();
 	            var action = "<i class='icon-pencil'></i><i class='icon-cancel'></i><i class='icon-check'></i>";
 	            if (role.indexOf("A") !== -1) {
-	            	$("#tabUsersAdmins").append("<tr><td>"+nom+"</td><td>"+prenom+"</td><td>"+adresse+"</td><td>"+email+"</td><td>"+role+"</td></td><td>"+action+"</td></tr>");
+	            	$("#tabUsersAdmins").append("<tr><td>"+pseudo+"</td><td>"+nom+"</td><td>"+prenom+"</td><td>"+adresse+"</td><td>"+email+"</td><td>"+role+"</td></td><td>"+action+"</td></tr>");
 	            };
 	            
 
 	        adminFilter = true;
 	        });
 
-	        $("#tabUsersAdmins").append("<tr ><td colspan='6' align='center'><i class='icon-to-start'></i> 1/1 <i class='icon-to-end'></i></td>");
+	        $("#tabUsersAdmins").append("<tr ><td colspan='7' align='center'><i class='icon-to-start'></i> 1/1 <i class='icon-to-end'></i></td>");
 
 	    };                   
 
@@ -144,6 +146,7 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 
 			
 			$(xmlUsers).find('personne').each(function(){
+				var pseudo = $(this).find('pseudo').text();
 	            var nom = $(this).find('nom').text();
 	            var prenom = $(this).find('prenom').text();
 	            var adresse = $(this).find('adresse').text();
@@ -151,14 +154,14 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 	            var role = $(this).find('role').text();
 	            var action = "<i class='icon-pencil'></i><i class='icon-cancel'></i><i class='icon-check'></i>";
 	            if (role.indexOf("R") !== -1) {
-	            	$("#tabUsersRedactors").append("<tr><td>"+nom+"</td><td>"+prenom+"</td><td>"+adresse+"</td><td>"+email+"</td><td>"+role+"</td></td><td>"+action+"</td></tr>");
+	            	$("#tabUsersRedactors").append("<tr><td>"+pseudo+"</td><td>"+nom+"</td><td>"+prenom+"</td><td>"+adresse+"</td><td>"+email+"</td><td>"+role+"</td></td><td>"+action+"</td></tr>");
 	            };
 	            
 
 	        redactorsFilter = true;
 	        });
 
-	        $("#tabUsersRedactors").append("<tr ><td colspan='6' align='center'><i class='icon-to-start'></i> 1/1 <i class='icon-to-end'></i></td>");
+	        $("#tabUsersRedactors").append("<tr ><td colspan='7' align='center'><i class='icon-to-start'></i> 1/1 <i class='icon-to-end'></i></td>");
 
 	    };                   
 
@@ -169,6 +172,7 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 
 			
 			$(xmlUsers).find('personne').each(function(){
+				var pseudo = $(this).find('pseudo').text();
 	            var nom = $(this).find('nom').text();
 	            var prenom = $(this).find('prenom').text();
 	            var adresse = $(this).find('adresse').text();
@@ -176,14 +180,14 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 	            var role = $(this).find('role').text();
 	            var action = "<i class='icon-pencil'></i><i class='icon-cancel'></i><i class='icon-check'></i>";
 	            if (role.indexOf("P") !== -1) {
-	            	$("#tabUsersPublishers").append("<tr><td>"+nom+"</td><td>"+prenom+"</td><td>"+adresse+"</td><td>"+email+"</td><td>"+role+"</td></td><td>"+action+"</td></tr>");
+	            	$("#tabUsersPublishers").append("<tr><td>"+pseudo+"</td><td>"+nom+"</td><td>"+prenom+"</td><td>"+adresse+"</td><td>"+email+"</td><td>"+role+"</td></td><td>"+action+"</td></tr>");
 	            };
 	            
 
 	        publishersFilter = true;
 	        });
 
-	        $("#tabUsersPublishers").append("<tr ><td colspan='6' align='center'><i class='icon-to-start'></i> 1/1 <i class='icon-to-end'></i></td>");
+	        $("#tabUsersPublishers").append("<tr ><td colspan='7' align='center'><i class='icon-to-start'></i> 1/1 <i class='icon-to-end'></i></td>");
 
 	    };                   
 
