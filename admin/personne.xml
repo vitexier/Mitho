@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Conte SYSTEM "personne.dtd" >
+<personnes>
+	<personne>
+		<nom>nom</nom>
+		<prenom>prenom</prenom>
+		<email>email</email>
+		<adresse>adresse</adresse>
+		<role>R</role>
+		<password>password</password>
+	</personne>
+	<personne>
+		<nom>nom2</nom>
+		<prenom>prenom</prenom>
+		<email>vincent0texier@gmail.com</email>
+		<adresse>Essonne</adresse>
+		<role>AR</role>
+		<password>password</password>
+	</personne>
+	<personne>
+		<nom>nom3</nom>
+		<prenom>prenom</prenom>
+		<email>email</email>
+		<adresse>adresse</adresse>
+		<role>P</role>
+		<password>password</password>
+	</personne>
+	<personne>
+		<nom>nom4</nom>
+		<prenom>prenom</prenom>
+		<email>email</email>
+		<adresse>adresse</adresse>
+		<role>AP</role>
+		<password>password</password>
+	</personne>
+</personnes>

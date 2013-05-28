@@ -10,6 +10,20 @@ ini_set('error_reporting', E_ALL);
 
 */
 
+
+/**
+
+Méthode qui récupère tous les utilisateurs
+renvoit un arbre XML contenant tous les utilisateurs. 
+
+*/
+function getAllUsers(){
+    header("Content-Type:text/xml");
+    //echo file_get_contents("http://82.234.92.81:5225/cgi-bin/client?X2xsearch+7+login=Robin&pwd=854895+search="(id,titre,auteur,dateDerniereModif,etat,refSmf)<DANS>Conte"&display=XML); //on inteprete coté client l'écho comme un retour normal. 
+    echo file_get_contents("http://localhost/Mitho/admin/personne.xml");
+}
+
+
 /**
 
 Méthode qui récupère tous les élements publiés
@@ -92,6 +106,9 @@ if(!isset($_GET['id'])){
             break;
         case 2:
             echo getAllPublished();
+            break;
+        case 3:
+            echo getAllUsers();
             break;
 
         /*case 3:
