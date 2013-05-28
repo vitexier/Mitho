@@ -19,7 +19,8 @@ renvoit un arbre XML contenant tous les contenus publiés.
 function getAllPublished(){
     // C'est peut être complètement faux mais j'essaie
     header("Content-Type:text/xml");
-    echo file_get_contents("http://82.234.92.81:5225/cgi-bin/client?X2xsearch+7+login=Robin&pwd=854895+search="(id,titre,auteur,dateDerniereModif,etat,refSmf)<DANS>Conte"&display=XML); //on inteprete coté client l'écho comme un retour normal. 
+    //echo file_get_contents("http://82.234.92.81:5225/cgi-bin/client?X2xsearch+7+login=Robin&pwd=854895+search="(id,titre,auteur,dateDerniereModif,etat,refSmf)<DANS>Conte"&display=XML); //on inteprete coté client l'écho comme un retour normal. 
+    echo file_get_contents("http://localhost/Mitho/admin/contes.xml");
     // Je veux récupérer l'id l'auteur...
 }
 
@@ -92,7 +93,7 @@ if(!isset($_GET['id'])){
         case 2:
             echo getAllPublished();
             break;
-      
+
         /*case 3:
             echo autre();
             break; etc ....*/ 

@@ -1,6 +1,6 @@
 <?php 
   include("function.php"); 
-  auth();
+  //auth();
 ?>
 
 <!doctype html>

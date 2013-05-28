@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Conte SYSTEM "conte-ver-full.dtd" >
+<Contes>
+  <Conte>
+    <id dateID="03-04-2013" type="conte">id</id>
+    <titre>La fée fagot</titre>
+    <resume>Elle exosse tous les voeux</resume>
+    <lieu>
+      <pays>Disney</pays>
+      <region>trous du cul du monde</region>
+      <departement>99</departement>
+      <canton></canton>
+      <cp>99999</cp>
+      <ville>Dinsey ville</ville>
+      <adresse>
+        <numero></numero>
+        <rue></rue>
+      </adresse>
+      <lieuDit></lieuDit>
+      <coordonnees latitude="99" longitude="99"/>
+    </lieu>
+    <refStith>
+      <code>234F</code>
+      <libAnglais>Fée</libAnglais>
+    </refStith>
+    <refSmf>23456789</refSmf>
+    <collectage final="oui">
+      <dateCollectage anneeCollectage="1999"/>
+      <refBiblio>
+        <nomBiblio>La fée fagot lib</nomBiblio>
+        <auteursBiblio>
+          <personne>Dupont</personne>
+        </auteursBiblio>
+        <dateEditionBilbio>20/03/1900</dateEditionBilbio>
+      </refBiblio>
+      <personne/>
+    </collectage>
+    <refConteType>1</refConteType>
+    <images>
+      <description>
+
+      </description>
+      <auteur>
+      
+      </auteur>  
+      <src>
+      
+      </src>       
+    </images>
+      <description>
+
+      </description>
+      <auteur>
+      
+      </auteur>  
+      <src>
+      
+      </src>
+    <medias/>
+    <avis>
+        <note>
+          blablabla :D
+        </note>
+        <personne>
+          toto
+        </personne>
+    </avis>
+    <dateDerniereModif anneeDerniereModif="2012" jourDerniereModif="1" moisDerniereModif="2"/>
+    <dateCreation anneeCreation="2012" jourCreation="1" moisCreation="2"/>
+    <etat/>
+  </Conte>
+    <Conte>
+    <id dateID="03-04-2013" type="mythe">mythe_03-04-2013_003254678523654</id>
+    <titre>Diable rose</titre>
+    <resume>Diable rose gay</resume>
+    <lieu>
+      <pays>France</pays>
+      <region>ile de france</region>
+      <departement>75</departement>
+      <canton></canton>
+      <cp>75001</cp>
+      <ville>Paris</ville>
+      <adresse>
+        <numero></numero>
+        <rue></rue>
+      </adresse>
+      <lieuDit></lieuDit>
+      <coordonnees latitude="" longitude=""/>
+    </lieu>
+    <refStith>
+      <code>4231</code>
+      <libAnglais>Pink evil</libAnglais>
+    </refStith>
+    <refSmf>53267</refSmf>
+    <collectage final="oui">
+      <dateCollectage anneeCollectage="2004"/>
+      <refBiblio>
+        <nomBiblio>Diables bizarre</nomBiblio>
+        <auteursBiblio>
+          <personne>
+            <nom>
+            </nom>
+            <prenom>
+            </prenom>
+            <email>
+            </email>
+            <adresse>
+              <numero>
+              </numero>
+              <rue>
+              </rue>
+            </adresse>
+          </personne>
+        </auteursBiblio>
+        <dateEditionBilbio>dateEditionBilbio</dateEditionBilbio>
+      </refBiblio>
+      <personne/>
+    </collectage>
+    <refConteType>refConteType</refConteType>
+    <images/>
+    <medias/>
+    <avis/>
+    <dateDerniereModif/>
+    <dateCreation anneeCreation="" jourCreation="" moisCreation=""/>
+    <etat/>
+  </Conte>
+    <Conte>
+    <id dateID="" type="">id</id>
+    <titre>titre</titre>
+    <resume>resume</resume>
+    <lieu>
+      <pays>pays</pays>
+      <region>region</region>
+      <departement>departement</departement>
+      <canton>canton</canton>
+      <cp>cp</cp>
+      <ville>ville</ville>
+      <adresse>
+        <numero>numero</numero>
+        <rue>rue</rue>
+      </adresse>
+      <lieuDit>lieuDit</lieuDit>
+      <coordonnees latitude="" longitude=""/>
+    </lieu>
+    <refStith>
+      <code>code</code>
+      <libAnglais>libAnglais</libAnglais>
+    </refStith>
+    <refSmf>refSmf</refSmf>
+    <collectage final="oui">
+      <dateCollectage anneeCollectage=""/>
+      <refBiblio>
+        <nomBiblio>nomBiblio</nomBiblio>
+        <auteursBiblio>
+          <personne/>
+        </auteursBiblio>
+        <dateEditionBilbio>dateEditionBilbio</dateEditionBilbio>
+      </refBiblio>
+      <personne/>
+    </collectage>
+    <refConteType>refConteType</refConteType>
+    <images/>
+    <medias/>
+    <avis/>
+    <dateDerniereModif/>
+    <dateCreation anneeCreation="" jourCreation="" moisCreation=""/>
+    <etat/>
+  </Conte>
+</Contes>
