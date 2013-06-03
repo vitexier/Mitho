@@ -34,7 +34,8 @@ function getAllPublished(){
     // C'est peut être complètement faux mais j'essaie
     header("Content-Type:text/xml");
     //echo file_get_contents("http://82.234.92.81:5225/cgi-bin/client?X2xsearch+7+login=Robin&pwd=854895+search="(id,titre,auteur,dateDerniereModif,etat,refSmf)<DANS>Conte"&display=XML); //on inteprete coté client l'écho comme un retour normal. 
-    echo file_get_contents("http://localhost/Mitho/admin/contes.xml");
+    //echo file_get_contents("http://localhost/Mitho/admin/contes.xml");
+    echo file_get_contents("http://82.234.92.81:5225/cgi-bin/client?X2XSearch+7+".$_SESSION['idSession']."+allrequest=");
     // Je veux récupérer l'id l'auteur...
 }
 
@@ -58,7 +59,7 @@ function auth(){
  
     } 
 
-    //header("Content-Type:text/xml");
+    header("Content-Type:text/xml");
     //echo "http://82.234.92.81:5225/cgi-bin/client?X2Admin+13++login=".$login."&pwd=".$mdp."<BR>";
     $return = file_get_contents("http://82.234.92.81:5225/cgi-bin/client?X2Admin+13++login=".$login."&pwd=".$mdp);
     //echo $return;
@@ -68,28 +69,23 @@ function auth(){
     foreach($erreur as $e){
         $result = $e->nodeValue;
     }
-    //echo sizeof($e) . $e;
-    //echo sizeof($result) . $result;
 
     if(sizeof($result) > 0){
         
         echo "<erreur>".$result."</erreur>";
     }else {
-
-        
+       
         echo $return;
         session_start();
         $session = $dom->getElementsByTagName('clefsession');
         foreach($session as $i){
             $idSession = $i->nodeValue;
         }
-
-
         
         //echo $idSession;
         $_SESSION['idSession'] = $idSession;
-        //echo $_SESSION['idSession'];
-        header ('location: http://localhost/Mitho/admin/');
+        $_SESSION['login'] = $login;
+        
     }
     
 

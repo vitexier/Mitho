@@ -65,7 +65,8 @@ var etat = {
 				    	console.log("sucess");
 
 				    	var erreur = $(xml).find('erreur').text();
-				    	console.log("erreur " + erreur);
+				    	 window.location = "http://localhost/Mitho/admin/";
+				    	
 				    },
 				    error: function (error) {
 				    	console.log("erreur");
@@ -331,7 +332,7 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 		});
 
 		$(".icon-search").click(function(){
-
+			alert('toto');
 		});
 
 

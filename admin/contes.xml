@@ -7,7 +7,7 @@
     <resume>Elle exosse tous les voeux</resume>
     <lieu>
       <pays>Disney</pays>
-      <region>trous du cul du monde</region>
+      <region>ile de france</region>
       <departement>99</departement>
       <canton></canton>
       <cp>99999</cp>
@@ -74,7 +74,7 @@
               armand
             </prenom>
             <email>
-              roco.armand@gmail.com
+              toto.armand@gmail.com
             </email>
             <adresse>
               <numero>
@@ -94,7 +94,7 @@
     <Conte>
     <id dateID="03-04-2013" type="mythe">mythe_03-04-2013_003254678523654</id>
     <titre>Diable rose</titre>
-    <resume>Diable rose gay</resume>
+    <resume>Diable rose </resume>
     <lieu>
       <pays>France</pays>
       <region>ile de france</region>
