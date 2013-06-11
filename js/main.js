@@ -332,7 +332,7 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 		});
 
 		$(".icon-search").click(function(){
-			alert('toto');
+			//alert('toto');
 		});
 
 

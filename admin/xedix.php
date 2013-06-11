@@ -74,18 +74,20 @@ function auth(){
         
         echo "<erreur>".$result."</erreur>";
     }else {
-       
-        echo $return;
         session_start();
+        echo $return;
         $session = $dom->getElementsByTagName('clefsession');
         foreach($session as $i){
             $idSession = $i->nodeValue;
         }
         
-        echo $idSession;
+       // echo $idSession;
 
         $_SESSION['idSession'] = $idSession;
         $_SESSION['login'] = $login;
+
+
+        //echo $_SESSION['idSession'];
         
     }
     
