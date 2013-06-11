@@ -1,4 +1,5 @@
 <?php 
+session_start();
 
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
@@ -74,7 +75,7 @@ function auth(){
         
         echo "<erreur>".$result."</erreur>";
     }else {
-        session_start();
+        
         echo $return;
         $session = $dom->getElementsByTagName('clefsession');
         foreach($session as $i){

@@ -65,7 +65,7 @@ var etat = {
 				    	console.log("sucess");
 
 				    	var erreur = $(xml).find('erreur').text();
-				    	 window.location = "http://localhost/Mitho/admin/";
+				    	window.location = "http://localhost/Mitho/admin/"
 				    	
 				    },
 				    error: function (error) {

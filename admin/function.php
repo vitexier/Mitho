@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 function pageAdmin(){
 	
 		if(!empty($_GET['page'])){
@@ -21,7 +21,7 @@ function pageAdmin(){
 					include("editContenu/index.php");
 					break;	
 				case "logout" : 	
-					include("logout/index.php");
+					header('Location: http://localhost/Mitho/');  
 					break;
 				case "editUtilisateur" : 	
 					include("editUtilisateur/index.php");
