@@ -1,19 +1,10 @@
 
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
-<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/b/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
   <title>Société de Mythologie Française</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
@@ -22,53 +13,286 @@
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
-       However, there is a blank style.css in the css directory should you prefer -->
+
   <link rel="stylesheet" href="css/gumby.css">
   <link rel="stylesheet" href="css/style.css">
+  
 </head>
 
 <body>
 
-<div  id="navacceuil" gumby-fixed="top" gumby-end="500">
+
+<!--------------------------------Bar SLide -------------------------------------->
+<div class="navbar" id="nav1" gumby-fixed="top" gumby-end="500">
     <div class="row">
       <a class="toggle" gumby-trigger=".navbar > .row > ul" href="#"><i class="icon-menu"></i></a>
-      <h3 class="four columns logo" style="font-family:titre !important; color : white">SMF</h3>
+      <h3 class="four columns logo" style="font-family:titre !important; color : white">Mythologie Français</h3>
       <ul class="eight columns">
-        <li><a href="?page=acceuil">Société</a></li>
-        <li><a href="?page=contenu" >Mythologie Française</a></li>
-        <li><a href="?page=utilisateurs" >Nouvelles</a></li>
-        <li><a href="?page=serveur">A propos</a></li>
+        <li><a href="index.html">Rechercher</a></li>
+        <li><a href="société.html" >Société SMF</a></li>
+        <li><a href="?page=utilisateurs" >Commission atlass</a></li>
+        <li><a href="index_contact.html">Nous contacter</a></li>
       </ul>
     </div>
   </div>
-
+<!--------------------------------Fin Bar SLide -------------------------------------->
     
-    <div class="container">
-      <div class="row">
-      
-        <div class="twelve columns">
-          <p>12 columns</p>
-        </div>
-        <div class="two columns">
-          <p>2</p>
-        </div>
+<div class="container">
+	
+		<form>
+			<div class="row">
+				<div class="eight columns">
+					<li class="field">
+						<input class="search input" type="searcg" placeholder="Mot clé, résumé, commune, lieu dit, code STITH ...">
+						
+					</li>
+				</div>
+				<div class="tow columns">
+					<li class="field">
+						<div id="rechercher" class="medium info btn icon-right entypo icon-search"><a href="#">Rechercher</a></div>	
+					</li>
+				</div>
+				<div class="tow columns">
+					<li class="field">
+						<div id="option-Recherche" class="medium btn pill-right icon-right info icon-plus-circled"> <a href="#">Option</a></div>
+					</li>
+				</div>
+			</div>
+			
+		
+		
+<!--------------------------------Option de recherhce -------------------------------------->			
 
-      </div>
-    </div>
+			<div class="row">
+				<fieldset id="cadre-option" class="centered">
+					<legend>Options de Recherche</legend>
+						
+							<ul class="three_up tiles">
+							
+								<li class="field"><input class=" text input" id="commune" type="text" placeholder="Commune, ville" /></li>
+							
+								<li class="field"><input class=" text input" id="lieu-dit" type="text" placeholder="Lieu dit" /></li>
+																										
+								<li class="field"><input class=" text input" id="code-stith" type="text" placeholder="Code Stith" /></li>
+								<li class="field"><input class=" text input" id="date-collect" type="text" placeholder="Date collectage" /></li>
+								<li class="field"><input class=" text input" id="text2" type="text" placeholder="Auteur" /></li>					
+									
+							</ul>					
+						
+				</fieldset>
+			
+			</div>
+			
+		
+		</form>
+	</div>	
 
+<!--------------------------------Fin Option de recherhce -------------------------------------->	
+<div id="resultat-recherche">
+	<div class="row">
+		<div class="sixteen columns">
+			Résultats : 2<br>
+		</div>
+	</div>
+
+	
+		<div class="container">
+
+			<div class="sixteen colgrid">
+				<div class="choixlist">
+					<div class="row">
+						<div class="sixteen columns">
+							<div class="bordure"></div><br>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="two columns bold">
+							<b>Code Stith :</b>
+						</div>
+						<div class="eight columns">
+							<p>Code Stist 1, Code stist 2, code Stist 3</p>
+						</div>
+						<div class="two columns bold">
+							<b>Commune :</b>
+						</div>
+						<div class="four columns">
+							<p>Reviers, Basse-Normandie, France<p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="two columns bold">
+							<b>Titre :</b>
+						</div>
+						<div class="eight columns">
+							<p>le loup et le rat</p>
+						</div>
+						<div class="four columns bold">
+							<b>Dernière modification :</b>
+						</div>
+						<div class="two columns">
+							<p>18/5/2013<p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="two columns bold">
+							<b>Résumé :</b>
+						</div>
+						<div class="ten columns">
+							<p>le loup et le rat sont des amis depuis toujours ...</p>
+						</div>
+		
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	
+		<div class="container">
+
+			<div class="sixteen colgrid">
+				<div class="choixlist">
+					<div class="row">
+						<div class="sixteen columns">
+							<div class="bordure"></div><br>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="two columns bold">
+							<b>Code Stist :</b>
+						</div>
+						<div class="eight columns">
+							<p>Code Stist 1, Code stist 2, code Stist 3</p>
+						</div>
+						<div class="two columns bold">
+							<b>Commune :</b>
+						</div>
+						<div class="four columns">
+							<p>Reviers, Basse-Normandie, France<p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="two columns bold">
+							<b>Titre :</b>
+						</div>
+						<div class="eight columns">
+							<p>le loup et le rat</p>
+						</div>
+						<div class="four columns bold">
+							<b>Dernière modification :</b>
+						</div>
+						<div class="two columns">
+							<p>18/5/2013<p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="two columns bold">
+							<b>Résumé :</b>
+						</div>
+						<div class="ten columns">
+							<p>le loup et le rat sont des amis depuis toujours ...</p>
+						</div>
+		
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+<br><br><br><br><br><br><br>
   <footer>
     <a href="admin">Administration</a><br>
       Copyright &copy; 2013
   </footer>
   <!-- JavaScript at the bottom for fast page loading -->
   <script src="js/libs/modernizr-2.6.2.min.js"></script>
-  <script src="js/libs/jquery-1.8.3.min.js"></script>
+  	<link href="css/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+
+	<script src="js/libs/jquery-1.9.1.js"></script>
+	<script src="js/libs/jquery-ui-1.10.3.custom.js"></script>
+	
 
 
   <script src="js/libs/gumby.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  
+  <script type="text/javascript"> 
+
+	$(document).ready(function ()
+	{
+	
+		$("#cadre-option").hide();
+		$("#resultat-recherche").hide();
+		$("#date-collect").datepicker();
+		
+		
+
+		    $("#commune").autocomplete({     
+				source: function( request, response ) {      
+					$.ajax({          
+						url: "http://ws.geonames.org/searchJSON",         
+						dataType: "jsonp",         
+						data: { 
+						//q :"q",
+							lang : "fr",						
+							featureClass: "A", 
+							featureCode :"A",							
+							country :"FR",							
+							style: "full",         
+							maxRows: 12,        
+							name_startsWith: request.term       
+						},         
+					success: function( data ) {          
+							response( $.map( data.geonames, function( item ) {  
+								return {              
+									label: item.name + (item.adminName1 ? ", " + item.adminName1 : "") + ", " + item.countryName,           
+									value: item.name + (item.adminName1 ? ", " + item.adminName1 : "") + ", " + item.countryName              
+									}            
+								}));          
+							}        
+						});      
+					},      
+					minLength: 2
+				});  
+
+				
+				var tabCode = [      "gtgrgrg ","4855gtrgrg", "4848tgrg","gtrtgrgt54" ];   
+				var tabLieu = [      "lieu dit 1 ","lieu dit 1", "lieu dit 1","lieu dit 3.1","lieu dit 3.2",   "lieu dit 4 ","lieu dit 4", "lieu dit 7","lieu dit 7.1","lieu dit 8.2" ];   
+
+				$("#lieu-dit").autocomplete({      source: tabLieu    });
+				
+				$("#code-stith").autocomplete({      source: tabCode    });
+				
+		
+		$("#option-Recherche").click(function (){	
+		
+			if ($("#cadre-option").is(':visible')) {
+			
+				$("#cadre-option").hide();
+				$("#option-Recherche").attr("class","medium btn pill-right icon-right info icon-plus-circled");
+		
+			}else{
+			
+				$("#cadre-option").show();
+				$("#option-Recherche").attr("class","medium btn pill-right icon-right info icon-minus-circled");
+			}
+		
+		});
+		
+		$("#rechercher").click(function (){
+			$("#resultat-recherche").show(1000);
+		});
+	  
+	  
+	});
+	
+	
+  
+    </script>
 
 
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.

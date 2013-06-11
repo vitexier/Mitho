@@ -1,5 +1,5 @@
 body{
-	background-image: url('../images/beige2.GIF');
+	background: none repeat scroll 0% 0% rgb(238, 238, 238);
 }
 
 
@@ -17,9 +17,33 @@ footer {
     bottom: 0px;
     color: white;
     text-align: center;
-    background-image: url('../images/backgroundsponge.jpg');;
+    background: #4a4d50;
 
 }
+
+div.bordure {
+	border-bottom:1px solid #6D6E6E;
+}
+.choixlist:hover{    
+	background-color:#CDD4F2;
+	
+}
+.choixlist:active{    
+	
+	background-color:white;
+}
+
+.bold {
+	font-weight:bold;
+
+}
+
+#div_carte { 
+height : 300px; /* IMPERATIF */ 
+width : 300px; 
+margin : auto; 
+border : 1px solid #888; 
+} 
 
 /*=====================================================
  Navigation (with dropdowns)
