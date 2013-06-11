@@ -37,7 +37,7 @@ function pageAdmin(){
 }
 
 function auth(){
-	if(!empty($_SESSION['idSession'])){
+	if(empty($_SESSION['idSession'])){
 		header ('location: http://localhost/Mitho/admin/auth/index.php');
 	}
 	

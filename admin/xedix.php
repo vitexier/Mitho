@@ -82,7 +82,8 @@ function auth(){
             $idSession = $i->nodeValue;
         }
         
-        //echo $idSession;
+        echo $idSession;
+
         $_SESSION['idSession'] = $idSession;
         $_SESSION['login'] = $login;
         
