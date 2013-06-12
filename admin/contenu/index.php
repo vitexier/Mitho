@@ -1,4 +1,3 @@
-
 <h2 class="lead">Gestion des contenus</h2>
 <div class="row">
   <div class="twelve columns">
@@ -10,7 +9,7 @@
         <li><a id="inPublished" href="#">Publié</a></li>
 
       </ul>
-      <div class="tab-content eight columns active">
+      <div class="tab-content nine columns active">
         <div class="tableMytho" >
                 <table id="tabNotPublished">
                     <tr>
@@ -26,7 +25,6 @@
                         </td>
                         <td>
                             Date modification <i class="icon-down-dir"></i>
-
                         </td>
                         <td>
                             Action
@@ -37,7 +35,7 @@
             </div>
             <br>
       </div>
-      <div class="tab-content eight columns ">
+      <div class="tab-content nine columns ">
                 <div class="tableMytho" >
                 <table id="tabRedaction">
                     <tr>
@@ -61,7 +59,7 @@
                 </table>
             </div>
       </div>
-      <div class="tab-content eight columns">
+      <div class="tab-content nine columns">
                 <div class="tableMytho" >
                 <table id="tabModeration">
                     <tr>
@@ -85,7 +83,7 @@
                 </table>
             </div>
       </div>
-      <div class="tab-content eight columns">
+      <div class="tab-content nine columns">
                 <div class="tableMytho" >
                 <table id="tabPublished">
                     <tr>

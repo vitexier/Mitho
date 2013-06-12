@@ -2,39 +2,35 @@
 <!DOCTYPE Conte SYSTEM "personne.dtd" >
 <personnes>
 	<personne>
-		<pseudo>pif</pseudo>
-		<nom>nom</nom>
-		<prenom>prenom</prenom>
-		<email>email</email>
-		<adresse>adresse</adresse>
+		<pseudo>alima</pseudo>
+		<nom>LIMA</nom>
+		<prenom>Angélo</prenom>
+		<email>angelomiguellima@gmail.com</email>
+		<codePostale>91130</codePostale>
 		<role>R</role>
-		<password>password</password>
 	</personne>
 	<personne>
-		<pseudo>paf</pseudo>
-		<nom>nom2</nom>
-		<prenom>prenom</prenom>
+		<pseudo>vtexier</pseudo>
+		<nom>TEXIER</nom>
+		<prenom>Vincent</prenom>
 		<email>vincent0texier@gmail.com</email>
-		<adresse>Essonne</adresse>
-		<role>AR</role>
-		<password>password</password>
+		<codePostale>91000</codePostale>
+		<role>A</role>
 	</personne>
 	<personne>
-		<pseudo>pouf</pseudo>
-		<nom>nom3</nom>
-		<prenom>prenom</prenom>
-		<email>email</email>
-		<adresse>adresse</adresse>
+		<pseudo>ageant</pseudo>
+		<nom>GEANT</nom>
+		<prenom>Aurélien</prenom>
+		<email>aurelien.geant@gmail.com</email>
+		<codePostale>75000</codePostale>
 		<role>P</role>
-		<password>password</password>
 	</personne>
 	<personne>
-		<pseudo>bubule</pseudo>
-		<nom>nom4</nom>
-		<prenom>prenom</prenom>
-		<email>email</email>
-		<adresse>adresse</adresse>
-		<role>AP</role>
-		<password>password</password>
+		<pseudo>jdemarest</pseudo>
+		<nom>DEMAREST</nom>
+		<prenom>Julian</prenom>
+		<email>julian.demarest@gmail.com</email>
+		<codePostale>77000</codePostale>
+		<role>A</role>
 	</personne>
 </personnes>

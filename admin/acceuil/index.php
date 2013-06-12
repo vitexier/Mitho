@@ -6,11 +6,11 @@
   </div>  
   <div class="eight columns">
     <section class="tabs">
-     <ul class="tab-nav ">
+     <ul class="tab-nav active">
       <li><a href="#">A traiter</a></li>
      </ul>
-     <div class="tab-content">
-      <p>Proin elit arcu, rutrum commodo...</p>
+     <div class="tab-content active">
+      <p>Bonjour <span style="color:red"><?php echo $_SESSION['login']; ?></span>, vous n'avez rien de notifié pour le moment.</p>
      </div>
 
     </section>

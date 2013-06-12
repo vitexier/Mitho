@@ -2,16 +2,16 @@
 <!DOCTYPE Conte SYSTEM "conte-ver-full.dtd" >
 <Contes>
   <Conte>
-    <id dateID="03-04-2013" type="conte">conte_03-04-2013_123456789754</id>
-    <titre>La fée fagot</titre>
-    <resume>Elle exosse tous les voeux</resume>
+    <id dateID="03-04-2013" type="conte">conte_03-04-2013_4699546146146</id>
+    <titre>Le diable rouge</titre>
+    <resume>Un diable qui est rouge ! Dans une galaxy très très lointaine.</resume>
     <lieu>
-      <pays>Disney</pays>
-      <region>ile de france</region>
-      <departement>99</departement>
+      <pays></pays>
+      <region>Ile de france</region>
+      <departement>75</departement>
       <canton></canton>
-      <cp>99999</cp>
-      <ville>Dinsey ville</ville>
+      <cp></cp>
+      <ville></ville>
       <adresse>
         <numero></numero>
         <rue></rue>
@@ -21,15 +21,15 @@
     </lieu>
     <refStith>
       <code>234F</code>
-      <libAnglais>Fée</libAnglais>
+      <libAnglais>Devils</libAnglais>
     </refStith>
-    <refSmf>23456789</refSmf>
+    <refSmf>4699546146146</refSmf>
     <collectage final="oui">
       <dateCollectage anneeCollectage="1999"/>
       <refBiblio>
-        <nomBiblio>La fée fagot lib</nomBiblio>
+        <nomBiblio>Les diables</nomBiblio>
         <auteursBiblio>
-          <personne>Dupont</personne>
+          <personne>Satan</personne>
         </auteursBiblio>
         <dateEditionBilbio>20/03/1900</dateEditionBilbio>
       </refBiblio>
@@ -39,42 +39,36 @@
     <images>
       <image>
         <description>
-
         </description>
-        <auteur>
-        
+        <auteur>       
         </auteur>  
         <src>
-        
         </src>
       </image>
       <image>
         <description>
-
         </description>
-        <auteur>
-        
+        <auteur>      
         </auteur>  
-        <src>
-        
+        <src>       
         </src>
       </image>        
     </images>
     <medias/>
     <avis>
         <note>
-          blablabla :D
+          Ca fait penser à starWars
         </note>
         
         <personne>
             <nom>
-              roco
+              LIMA
             </nom>
             <prenom>
-              armand
+              Angélo
             </prenom>
             <email>
-              toto.armand@gmail.com
+              angelomiguellima@gmail.com
             </email>
             <adresse>
               <numero>
@@ -84,24 +78,23 @@
                 avenue de la gare 
               </rue>
             </adresse>
-        </personne>
-        
+        </personne>       
     </avis>
-    <dateDerniereModif anneeDerniereModif="2012" jourDerniereModif="1" moisDerniereModif="2"/>
-    <dateCreation anneeCreation="2012" jourCreation="1" moisCreation="2"/>
-    <etat>nonpublié</etat>
+    <dateDerniereModif anneeDerniereModif="2012" jourDerniereModif="01" moisDerniereModif="02"/>
+    <dateCreation anneeCreation="2012" jourCreation="01" moisCreation="02"/>
+    <etat>NP</etat>
   </Conte>
     <Conte>
-    <id dateID="03-04-2013" type="mythe">mythe_03-04-2013_003254678523654</id>
-    <titre>Diable rose</titre>
-    <resume>Diable rose </resume>
+    <id dateID="03-04-2013" type="mythe">mythe_03-04-2013_4699546146147</id>
+    <titre>Diable noir</titre>
+    <resume>Cette fois le diable était noir !</resume>
     <lieu>
-      <pays>France</pays>
-      <region>ile de france</region>
-      <departement>75</departement>
+      <pays></pays>
+      <region></region>
+      <departement>91</departement>
       <canton></canton>
-      <cp>75001</cp>
-      <ville>Paris</ville>
+      <cp></cp>
+      <ville></ville>
       <adresse>
         <numero></numero>
         <rue></rue>
@@ -113,7 +106,7 @@
       <code>4231</code>
       <libAnglais>Pink evil</libAnglais>
     </refStith>
-    <refSmf>53267</refSmf>
+    <refSmf>4699546146147</refSmf>
     <collectage final="oui">
       <dateCollectage anneeCollectage="2004"/>
       <refBiblio>
@@ -134,6 +127,8 @@
             </adresse>
           </personne>
         </auteursBiblio>
+        <dateDerniereModif anneeDerniereModif="2012" jourDerniereModif="01" moisDerniereModif="02"/>
+        <dateCreation anneeCreation="2012" jourCreation="01" moisCreation="02"/>
         <dateEditionBilbio>dateEditionBilbio</dateEditionBilbio>
       </refBiblio>
       <personne/>
@@ -141,34 +136,58 @@
     <refConteType>refConteType</refConteType>
     <images/>
     <medias/>
-    <avis/>
+    <avis>
+        <note>
+          Ca fait penser à starWars
+        </note>
+        
+        <personne>
+            <nom>
+              LIMA
+            </nom>
+            <prenom>
+              Angélo
+            </prenom>
+            <email>
+              angelomiguellima@gmail.com
+            </email>
+            <adresse>
+              <numero>
+                8
+              </numero>
+              <rue>
+                avenue de la gare 
+              </rue>
+            </adresse>
+        </personne>       
+    </avis>
     <dateDerniereModif/>
     <dateCreation anneeCreation="" jourCreation="" moisCreation=""/>
     <etat/>
   </Conte>
     <Conte>
-    <id dateID="" type="">id</id>
-    <titre>titre</titre>
-    <resume>resume</resume>
+    <id dateID="" type="">mythe_03-04-2013_4699546146148</id>
+    <titre>Diable rose</titre>
+    <resume>Maintenant ils peuvent</resume>
     <lieu>
       <pays>pays</pays>
-      <region>region</region>
-      <departement>departement</departement>
-      <canton>canton</canton>
-      <cp>cp</cp>
-      <ville>ville</ville>
+      <region></region>
+      <departement>93</departement>
+      <canton></canton>
+      <cp></cp>
+      <ville></ville>
       <adresse>
-        <numero>numero</numero>
-        <rue>rue</rue>
+        <numero></numero>
+        <rue></rue>
       </adresse>
-      <lieuDit>lieuDit</lieuDit>
-      <coordonnees latitude="" longitude=""/>
+      <lieuDit></lieuDit>
+      <coordonnees latitude="99" longitude="99"/>
     </lieu>
     <refStith>
       <code>code</code>
       <libAnglais>libAnglais</libAnglais>
     </refStith>
-    <refSmf>refSmf</refSmf>
+    <refSmf>4699546146146</refSmf>
     <collectage final="oui">
       <dateCollectage anneeCollectage=""/>
       <refBiblio>
@@ -183,9 +202,33 @@
     <refConteType>refConteType</refConteType>
     <images/>
     <medias/>
-    <avis/>
-    <dateDerniereModif/>
-    <dateCreation anneeCreation="" jourCreation="" moisCreation=""/>
-    <etat>redaction</etat>
+    <avis>
+        <note>
+          Ca fait penser à starWars
+        </note>
+        
+        <personne>
+            <nom>
+              LIMA
+            </nom>
+            <prenom>
+              Angélo
+            </prenom>
+            <email>
+              angelomiguellima@gmail.com
+            </email>
+            <adresse>
+              <numero>
+                8
+              </numero>
+              <rue>
+                avenue de la gare 
+              </rue>
+            </adresse>
+        </personne>       
+    </avis>
+    <dateDerniereModif anneeDerniereModif="2012" jourDerniereModif="03" moisDerniereModif="03"/>
+    <dateCreation anneeCreation="2012" jourCreation="01" moisCreation="02"/>
+    <etat>R</etat>
   </Conte>
 </Contes>

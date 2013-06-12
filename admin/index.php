@@ -55,7 +55,7 @@
     </div>
 
   <footer id="footer">
-    <a href="?page=logout">Logout</a><br>
+    <a href="?page=logout">Déconnexion</a><br>
       Copyright &copy; 2013
   </footer>
   <!-- JavaScript at the bottom for fast page loading -->
@@ -65,6 +65,7 @@
 
   <script src="../js/libs/gumby.min.js"></script>
   <script src="../js/plugins.js"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
   <script src="../js/main.js"></script>
 
 

@@ -35,9 +35,18 @@ function getAllPublished(){
     // C'est peut être complètement faux mais j'essaie
     header("Content-Type:text/xml");
     //echo file_get_contents("http://82.234.92.81:5225/cgi-bin/client?X2xsearch+7+login=Robin&pwd=854895+search="(id,titre,auteur,dateDerniereModif,etat,refSmf)<DANS>Conte"&display=XML); //on inteprete coté client l'écho comme un retour normal. 
-    //echo file_get_contents("http://localhost/Mitho/admin/contes.xml");
-    echo file_get_contents("http://82.234.92.81:5225/cgi-bin/client?X2XSearch+7+".$_SESSION['idSession']."+allrequest=");
+    echo file_get_contents("http://localhost/Mitho/admin/contes.xml");
+    //echo file_get_contents("http://82.234.92.81:5225/cgi-bin/client?X2XSearch+7+".$_SESSION['idSession']."+allrequest=");
     // Je veux récupérer l'id l'auteur...
+}
+/**
+    Recupère un conte en particulier. En prenant l'id passé en param $_GET['id']
+*/
+function getPublishedContent(){
+    // C'est peut être complètement faux mais j'essaie
+    header("Content-Type:text/xml");
+    echo file_get_contents("http://localhost/Mitho/admin/contes.xml");
+
 }
 
 
@@ -110,6 +119,9 @@ if(!isset($_GET['id'])){
         case 3:
             echo getAllUsers();
             break;
+        case 4:
+            echo getPublishedContent();
+            break;    
 
         /*case 3:
             echo autre();

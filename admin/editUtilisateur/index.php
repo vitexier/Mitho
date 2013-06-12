@@ -1,5 +1,5 @@
 
-<div id="editContent">
+<div >
 <h3 align="center">Gestion des utilisateurs</h3>
 <div class="row" >
 	<form>	

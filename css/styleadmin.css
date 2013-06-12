@@ -10,6 +10,17 @@
   #icon_map ul li { font-size: 16px; }
   .smallify { font-size: 13px; }
 
+.bold {
+  font-weight:bold;
+
+}
+
+#div_carte { 
+height : 300px; /* IMPERATIF */ 
+width : 300px; 
+margin : auto; 
+
+} 
 footer {
     
     width: 100%;
@@ -22,6 +33,7 @@ footer {
 }
 
 .tableMytho {
+  cursor: pointer;
   margin:0px;padding:0px;
   width:100%;
   border:0px solid #301d1d;
@@ -73,11 +85,11 @@ footer {
   
   border:1px solid #301d1d;
   border-width:0px 1px 1px 0px;
-  text-align:left;
-  padding:10px;
-  font-size:10px;
+ 
+  padding:4px;
+  font-size:11px;
   font-family:Arial;
-  font-weight:normal;
+  font-weight:bolder;
   color:#000000;
 }.tableMytho tr:last-child td{
   border-width:0px 1px 0px 0px;
@@ -87,24 +99,16 @@ footer {
   border-width:0px 0px 0px 0px;
 }
 .tableMytho tr:first-child td{
-    background:-o-linear-gradient(bottom, #4a4d50 5%, #4a4d50 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4a4d50), color-stop(1, #4a4d50) );
-  background:-moz-linear-gradient( center top, #4a4d50 5%, #4a4d50 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#4a4d50", endColorstr="#4a4d50");  background: -o-linear-gradient(top,#4a4d50,4a4d50);
-
+   
   background-color:#4a4d50;
   border:0px solid #301d1d;
   text-align:center;
   border-width:0px 0px 1px 1px;
-  font-size:14px;
-  font-family:Arial;
+  font-size:11px;
   font-weight:bold;
   color:#ffffff;
 }
 .tableMytho tr:first-child:hover td{
-  background:-o-linear-gradient(bottom, #4a4d50 5%, #4a4d50 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4a4d50), color-stop(1, #4a4d50) );
-  background:-moz-linear-gradient( center top, #4a4d50 5%, #4a4d50 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#4a4d50", endColorstr="#4a4d50");  background: -o-linear-gradient(top,#4a4d50,4a4d50);
-
   background-color:#4a4d50;
 }
 .tableMytho tr:first-child td:first-child{

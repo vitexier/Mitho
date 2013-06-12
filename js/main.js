@@ -8,11 +8,34 @@ var moderationClick = 0;
 var publishClick = 0;
 
 var etat = {
-  NOTPUBLISH : "nonpublié",
-  PUBLISHED : "publié",
-  MODERATION : "moderation",
-  REDACTION : "redaction"
+  NOTPUBLISH : "NP",
+  PUBLISHED : "P",
+  MODERATION : "M",
+  REDACTION : "R"
 }
+
+function displayContent(id){
+	
+		window.location = "?page=editContenu&id="+id;
+}
+
+/**
+ * Fonction de récupération des paramètres GET de la page
+ * @return Array Tableau associatif contenant les paramètres GET
+ */
+	
+function getParamValue(param,url){
+	var u = url == undefined ? document.location.href : url;
+	var reg = new RegExp('(\\?|&|^)'+param+'=(.*?)(&|$)');
+	matches = u.match(reg);
+	if(matches !== null ){
+		return matches[2] != undefined ? decodeURIComponent(matches[2]).replace(/\+/g,' ') : '';
+	}
+	return "";
+}
+
+
+
 
 	$("#editContent").ready(function(){
 		$("#detailAdresse").toggle();
@@ -77,8 +100,8 @@ var etat = {
 			
 		});
 
-$("#tabUsers").ready(function(){
-			console.log("start request");
+		$("#tabUsers").ready(function(){
+			
 			/**
 
 
@@ -91,16 +114,16 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 				    dataType: "xml",
 				    success : function(xml){
 				    	xmlUsers = xml;
-				    	console.log(xmlUsers);
+				    	
 				    	
 				    	$(xmlUsers).find('personne').each(function(){
 				    		var pseudo = $(this).find('pseudo').text();
                             var nom = $(this).find('nom').text();
                             var prenom = $(this).find('prenom').text();
-                            var adresse = $(this).find('adresse').text();
+                            var adresse = $(this).find('codePostale').text();
                             var email = $(this).find('email').text();
                             var role = $(this).find('role').text();
-                            var action = "<i class='icon-pencil'></i><i class='icon-cancel'></i><i class='icon-check'></i>";
+                            var action = "</i><i class='icon-cancel'></i><i class='icon-check'></i>";
 
                             $("#tabUsers").append("<tr><td>"+pseudo+"</td><td>"+nom+"</td><td>"+prenom+"</td><td>"+adresse+"</td><td>"+email+"</td><td>"+role+"</td></td><td>"+action+"</td></tr>");
     
@@ -124,10 +147,10 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 				var pseudo = $(this).find('pseudo').text();
 	            var nom = $(this).find('nom').text();
 	            var prenom = $(this).find('prenom').text();
-	            var adresse = $(this).find('adresse').text();
+	            var adresse = $(this).find('codePostale').text();
 	            var email = $(this).find('email').text();
 	            var role = $(this).find('role').text();
-	            var action = "<i class='icon-pencil'></i><i class='icon-cancel'></i><i class='icon-check'></i>";
+	            var action = "<i class='icon-cancel'></i><i class='icon-check'></i>";
 	            if (role.indexOf("A") !== -1) {
 	            	$("#tabUsersAdmins").append("<tr><td>"+pseudo+"</td><td>"+nom+"</td><td>"+prenom+"</td><td>"+adresse+"</td><td>"+email+"</td><td>"+role+"</td></td><td>"+action+"</td></tr>");
 	            };
@@ -150,16 +173,15 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 				var pseudo = $(this).find('pseudo').text();
 	            var nom = $(this).find('nom').text();
 	            var prenom = $(this).find('prenom').text();
-	            var adresse = $(this).find('adresse').text();
+	            var adresse = $(this).find('codePostale').text();
 	            var email = $(this).find('email').text();
 	            var role = $(this).find('role').text();
-	            var action = "<i class='icon-pencil'></i><i class='icon-cancel'></i><i class='icon-check'></i>";
+	            var action = "<i class='icon-cancel'></i><i class='icon-check'></i>";
 	            if (role.indexOf("R") !== -1) {
 	            	$("#tabUsersRedactors").append("<tr><td>"+pseudo+"</td><td>"+nom+"</td><td>"+prenom+"</td><td>"+adresse+"</td><td>"+email+"</td><td>"+role+"</td></td><td>"+action+"</td></tr>");
 	            };
 	            
-
-	        redactorsFilter = true;
+	        	redactorsFilter = true;
 	        });
 
 	        $("#tabUsersRedactors").append("<tr ><td colspan='7' align='center'><i class='icon-to-start'></i> 1/1 <i class='icon-to-end'></i></td>");
@@ -176,10 +198,10 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 				var pseudo = $(this).find('pseudo').text();
 	            var nom = $(this).find('nom').text();
 	            var prenom = $(this).find('prenom').text();
-	            var adresse = $(this).find('adresse').text();
+	            var adresse = $(this).find('codePostale').text();
 	            var email = $(this).find('email').text();
 	            var role = $(this).find('role').text();
-	            var action = "<i class='icon-pencil'></i><i class='icon-cancel'></i><i class='icon-check'></i>";
+	            var action = "<i class='icon-cancel'></i><i class='icon-check'></i>";
 	            if (role.indexOf("P") !== -1) {
 	            	$("#tabUsersPublishers").append("<tr><td>"+pseudo+"</td><td>"+nom+"</td><td>"+prenom+"</td><td>"+adresse+"</td><td>"+email+"</td><td>"+role+"</td></td><td>"+action+"</td></tr>");
 	            };
@@ -194,13 +216,50 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 
 	});
 
-$("#tabNotPublished").ready(function(){
+	$("#editContent").ready(function(){
+		var idConte = getParamValue("id",document.location.href);
+		if(idConte !== ""){
+						$.ajax( {
+				    type: "GET",
+				    url: "http://localhost/Mitho/admin/xedix.php?id=4",
+				    dataType: "xml",
+				    success : function(xml){
+				    	//console.log(xml);
+				    	
+				    	$(xml).find('Conte').each(function(){
+				    		var id = $(this).find('id').text();
+				    		if(id === idConte){
+
+	                            var titre = $(this).find('titre').text();
+	                            var refSmf = $(this).find('refSmf').text();
+	                            
+	                            var dep = $(this).find('lieu').find('departement').text();
+	                            var auteurNom = $(this).find('avis').find('personne').find('nom').text();
+	                            var auteurPrenom = $(this).find('avis').find('personne').find('prenom').text();
+	                            var jour = $(this).find('dateDerniereModif').attr('jourDerniereModif') +"/"+$(this).find('dateDerniereModif').attr('moisDerniereModif') +"/"+$(this).find('dateDerniereModif').attr('anneeDerniereModif');
+	                            $("#titreConte").attr("value", titre);
+	                            $("#refSmfConte").attr("value", refSmf);
+	                            $("#dateDernierModifConte").append("<span>"+jour+"</span>");
+
+				    		}
+
+
+    
+                        });
+                         
+				    },
+				    error: function (error) {
+				    	console.log("erreur");
+				    }
+			});
+		}
+
+	});
+
+	$("#tabNotPublished").ready(function(){
 			//console.log("start request");
 			/**
-
-
-http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fichier-xml/
-
+				http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fichier-xml/
 			*/
 			$.ajax( {
 				    type: "GET",
@@ -211,14 +270,14 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 				    	xmlContents = xml;
 				    	$(xmlContents).find('Conte').each(function(){
                             var titre = $(this).find('titre').text();
+                            var id = $(this).find('id').text();
                             var dep = $(this).find('lieu').find('departement').text();
                             var auteurNom = $(this).find('avis').find('personne').find('nom').text();
                             var auteurPrenom = $(this).find('avis').find('personne').find('prenom').text();
                             var jour = $(this).find('dateDerniereModif').attr('jourDerniereModif') +"/"+$(this).find('dateDerniereModif').attr('moisDerniereModif') +"/"+$(this).find('dateDerniereModif').attr('anneeDerniereModif');
-                            var action = "<i class='icon-pencil'></i><i class='icon-cancel'></i><i class='icon-check'></i><i class='icon-search'></i>";
+                            var action = "<i class='icon-cancel'></i><i class='icon-check'></i></i>";
 
-
-                            $("#tabNotPublished").append("<tr><td>"+titre+"</td><td>"+auteurNom+auteurPrenom+"</td><td>"+dep+"</td><td>"+jour+"</td><td>"+action+"</td></tr>");
+                            $("#tabNotPublished").append("<tr onclick='displayContent(\"" +id+ "\");' id='"+id+"'><td>"+titre+"</td><td>"+auteurNom+auteurPrenom+"</td><td>"+dep+"</td><td>"+jour+"</td><td>"+action+"</td></tr>");
     
                         });
 
@@ -236,24 +295,22 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 			//console.log("redaction");
 			redactionClick ++ ;
 			/**
-
-
 			http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fichier-xml/
-
 			*/
 			if(redactionClick === 1 ){
 				$(xmlContents).find('Conte').each(function(){
                 var titre = $(this).find('titre').text();
+                var id = $(this).find('id').text();
                 var dep = $(this).find('lieu').find('departement').text();
                 var auteurNom = $(this).find('avis').find('personne').find('nom').text();
                 var auteurPrenom = $(this).find('avis').find('personne').find('prenom').text();
                 var jour = $(this).find('dateDerniereModif').attr('jourDerniereModif') +"/"+$(this).find('dateDerniereModif').attr('moisDerniereModif') +"/"+$(this).find('dateDerniereModif').attr('anneeDerniereModif');
                 var etatXml = $(this).find('etat').text();
-                var action = "<i class='icon-pencil'></i><i class='icon-cancel'></i><i class='icon-check'></i><i class='icon-search'></i>";
+                var action = "<i class='icon-cancel'></i><i class='icon-check'></i>";
 
 
                 if(etatXml===etat.REDACTION){
-                	$("#tabRedaction").append("<tr><td>"+titre+"</td><td>"+auteurNom+auteurPrenom+"</td><td>"+dep+"</td><td>"+jour+"</td><td>"+action+"</td></tr>");
+                	$("#tabRedaction").append("<tr onclick='displayContent(\"" +id+ "\");' id='"+id+"'><td>"+titre+"</td><td>"+auteurNom+auteurPrenom+"</td><td>"+dep+"</td><td>"+jour+"</td><td>"+action+"</td></tr>");
                 }
 
           
@@ -279,15 +336,16 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 			if(moderationClick === 1 ){
 				$(xmlContents).find('Conte').each(function(){
                 var titre = $(this).find('titre').text();
+                var id = $(this).find('id').text();
                 var dep = $(this).find('lieu').find('departement').text();
                 var auteurNom = $(this).find('avis').find('personne').find('nom').text();
                 var auteurPrenom = $(this).find('avis').find('personne').find('prenom').text();
                 var jour = $(this).find('dateDerniereModif').attr('jourDerniereModif') +"/"+$(this).find('dateDerniereModif').attr('moisDerniereModif') +"/"+$(this).find('dateDerniereModif').attr('anneeDerniereModif');
 				var etatXml = $(this).find('etat').text();
-				var action = "<i class='icon-pencil'></i><i class='icon-cancel'></i><i class='icon-check'></i><i class='icon-search'></i>";
+				var action = "i class='icon-cancel'></i><i class='icon-check'></i>";
 
                 if(etatXml===etat.MODERATION){
-                	$("#tabModeration").append("<tr><td>"+titre+"</td><td>"+auteurNom+auteurPrenom+"</td><td>"+dep+"</td><td>"+jour+"</td><td>"+action+"</td></tr>");
+                	$("#tabModeration").append("<tr onclick='displayContent(\"" +id+ "\");' id='"+id+"'><td>"+titre+"</td><td>"+auteurNom+auteurPrenom+"</td><td>"+dep+"</td><td>"+jour+"</td><td>"+action+"</td></tr>");
                 }
             	});
 
@@ -298,12 +356,10 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 
 
 		});
-
 		$("#inPublished").click(function(){
 			//console.log("redaction");
 			publishClick ++ ;
 			/**
-
 
 			http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fichier-xml/
 
@@ -311,15 +367,16 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 			if(publishClick === 1 ){
 				$(xmlContents).find('Conte').each(function(){
                 var titre = $(this).find('titre').text();
+                var id = $(this).find('id').text();
                 var dep = $(this).find('lieu').find('departement').text();
                 var auteurNom = $(this).find('avis').find('personne').find('nom').text();
                 var auteurPrenom = $(this).find('avis').find('personne').find('prenom').text();
                 var jour = $(this).find('dateDerniereModif').attr('jourDerniereModif') +"/"+$(this).find('dateDerniereModif').attr('moisDerniereModif') +"/"+$(this).find('dateDerniereModif').attr('anneeDerniereModif');
                 var etatXml = $(this).find('etat').text();
-                var action = "<i class='icon-pencil'></i><i class='icon-cancel'></i><i class='icon-search'></i>";
+                var action = "</i><i class='icon-cancel'></i>";
 
                 if(etatXml===etat.PUBLISHED){
-                	$("#tabPublished").append("<tr><td>"+titre+"</td><td>"+auteurNom+auteurPrenom+"</td><td>"+dep+"</td><td>"+jour+"</td><td>"+action+"</td></tr>");
+                	$("#tabPublished").append("<tr onclick='displayContent(\"" +id+ "\");' id='"+id+"'><td>"+titre+"</td><td>"+auteurNom+auteurPrenom+"</td><td>"+dep+"</td><td>"+jour+"</td><td>"+action+"</td></tr>");
                 }
             	});
 
@@ -331,9 +388,7 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 
 		});
 
-		$(".icon-search").click(function(){
-			//alert('toto');
-		});
+
 
 
 });

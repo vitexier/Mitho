@@ -7,7 +7,7 @@
         <li><a id="redactors" href="#">Rédacteurs</a></li>
         <li><a id="publishers"href="#">Rédacteurs-Publieurs</a></li>
       </ul>
-      <div class="tab-content eight columns active">
+      <div class="tab-content nine columns active">
           <div class="tableMytho" >
                 <table  id="tabUsers">
                     <tr>
@@ -22,7 +22,7 @@
                             Prénom <i class="icon-down-dir"></i>
                         </td>
                          <td>
-                           Adresse <i class="icon-down-dir"></i>
+                           Code postal <i class="icon-down-dir"></i>
                         </td>
                         <td>
                             Mail <i class="icon-down-dir"></i>
@@ -37,7 +37,7 @@
                 </table>
             </div>
       </div>
-      <div class="tab-content eight columns ">
+      <div class="tab-content nine columns ">
           <div class="tableMytho" >
                 <table  id="tabUsersAdmins">
                     <tr>
@@ -52,7 +52,7 @@
                             Prénom <i class="icon-down-dir"></i>
                         </td>
                          <td>
-                           Adresse <i class="icon-down-dir"></i>
+                           Code postal <i class="icon-down-dir"></i>
                         </td>
                         <td>
                             Mail <i class="icon-down-dir"></i>
@@ -68,7 +68,7 @@
                 </table>
             </div>
       </div>
-      <div class="tab-content eight columns">
+      <div class="tab-content nine columns">
 <div class="tableMytho" >
                 <table id="tabUsersRedactors" >
                     <tr>
@@ -83,7 +83,7 @@
                             Prénom <i class="icon-down-dir"></i>
                         </td>
                          <td>
-                           Adresse <i class="icon-down-dir"></i>
+                           Code postal <i class="icon-down-dir"></i>
                         </td>
                         <td>
                             Mail <i class="icon-down-dir"></i>
@@ -99,7 +99,7 @@
                 </table>
             </div>
       </div>
-      <div class="tab-content eight columns">
+      <div class="tab-content nine columns">
 <div class="tableMytho" >
                 <table id="tabUsersPublishers" >
                     <tr>
@@ -113,7 +113,7 @@
                             Prénom <i class="icon-down-dir"></i>
                         </td>
                          <td>
-                           Adresse <i class="icon-down-dir"></i>
+                           Code postal <i class="icon-down-dir"></i>
                         </td>
                         <td>
                             Mail <i class="icon-down-dir"></i>

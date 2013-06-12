@@ -20,12 +20,12 @@ function pageAdmin(){
 				case "editContenu" : 	
 					include("editContenu/index.php");
 					break;	
-				case "logout" : 	
-					header('Location: http://localhost/Mitho/');  
-					break;
 				case "editUtilisateur" : 	
 					include("editUtilisateur/index.php");
-					break;		
+					break;
+				case "logout" : 	
+					include("logout/index.php");
+					break;				
 				default: 
 					include("404/index.php");
 					break;	
