@@ -43,7 +43,6 @@ function getAllPublished(){
     Recupère un conte en particulier. En prenant l'id passé en param $_GET['id']
 */
 function getPublishedContent(){
-    // C'est peut être complètement faux mais j'essaie
     header("Content-Type:text/xml");
     echo file_get_contents("http://localhost/Mitho/admin/contes.xml");
 

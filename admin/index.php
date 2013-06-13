@@ -34,6 +34,23 @@
 
 <body>
 
+<div id="boxes">
+
+<div id="dialog" class="window1">
+<h4>Suppréssion d'un élement </h4>
+<p>Etes vous sûr de vouloir supprimer cet élement ? </p>
+    <p class="btn danger medium">
+        <a class="switch active" href="#" id="deleteButton">Supprimer</a>
+    </p>       
+    <p class="btn primary medium">
+        <a class="switch active" href="#" id="annulerDeleteButton">Annuler</a>
+    </p> 
+</div>
+  
+<!-- Mask to cover the whole screen -->
+  <div id="mask"></div>
+</div>
+
 <div class="navbar" id="nav1" gumby-fixed="top" gumby-end="500">
     <div class="row">
       <a class="toggle" gumby-trigger=".navbar > .row > ul" href="#"><i class="icon-menu"></i></a>

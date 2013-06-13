@@ -9,7 +9,7 @@
         </ul>
         </div>
         <div class="push_two columns ">
-        Dernière modification : <span id="dateDernierModifConte"></<span>
+        <span class="bold">Dernière modification : </span><span id="dateDernierModifConte"></<span>
         </div>
 
       </div>    
@@ -34,7 +34,7 @@
           <ul>
 
               <li class="field">
-                <span class="bold">Date de collectage : </span> &nbsp;<input class=" text input narrow" id="text1" type="text" placeholder="Date" />
+                <span class="bold">Date de collectage : </span> &nbsp;<input class=" text input narrow" id="dateCollectageConte" type="text" placeholder="Date" />
               </li>              
               
           </ul>
@@ -47,7 +47,7 @@
             <ul>
 
               <li class="field">
-                <textarea class="input textarea" placeholder="Résumé" rows="4"></textarea>                       
+                <textarea class="input textarea" placeholder="Résumé" rows="4" id="resumeConte"></textarea>                       
               </li>              
               
             </ul> 
@@ -63,43 +63,51 @@
             </ul> 
           </fieldset>
           <ul>
-            <li class="default alert">Conte type : <input style="border: none" id="text1" type="text" placeholder="..." /></li>
+            <li class="default alert">Conte type : <input style="border: none" id="conteTypeConte" type="text" placeholder="..." /><input type="checkbox" name="conteType" id="checkBoxConteType" value="true"> </li>
           </ul>
           <fieldset id="cadre-option" class="centered">
               <legend>Code Stith (Anglais)</legend>
-              <p>Code Stith 1 ,Code Stith 2 , Code Stith 3, Code Stith 4, Code Stith 5, Code Stith 5</p>
+              <ul class="field" id="ulStithEn">
+                <li><div class="pretty medium default btn icon-right icon-plus-circled centered"><a href="#">Ajouter</a></div></li>
+                <!--<li><p>Code Stith 1 ,Code Stith 2 , Code Stith 3, Code Stith 4, Code Stith 5, Code Stith 5</p></li>-->
+              </ul>
+              
           </fieldset>
           <fieldset id="cadre-option" class="centered">
               <legend>Code Stith (français)</legend>
-              <p>Code Stith 1 ,Code Stith 2 , Code Stith 3, Code Stith 4, Code Stith 5, Code Stith 5</p>
+              <ul class="field" id="ulStithFr">
+                <li><div class="pretty medium default btn icon-right icon-plus-circled centered"><a href="#">Ajouter</a></div></li>
+                <!--<li><p>Code Stith 1 ,Code Stith 2 , Code Stith 3, Code Stith 4, Code Stith 5, Code Stith 5</p></li>-->
+              </ul>
           </fieldset>
           <h5 class="lead bold ">Référence Bibliographique :</h5>
-          <ul class="disc">
-            <li>* Livre 1 (auteur) : 1988</li>
-            <li>* Livre 1 (auteur) : 1988</li>
-          </ul>
+              <ul class="field" id="ulBiblio">
+                <li><div class="pretty medium default btn icon-right icon-plus-circled centered"><a href="#">Ajouter</a></div></li>
+                <!--<li><p>Code Stith 1 ,Code Stith 2 , Code Stith 3, Code Stith 4, Code Stith 5, Code Stith 5</p></li>-->
+              </ul>
         </div>
         <div class="push_one  five columns">
           
-          <br><div class="pretty medium default btn icon-right icon-camera centered"><a href="#">Ajouter image</a></div>
+          <br><div class="pretty medium default btn icon-right icon-camera centered "><a href="#">Ajouter image</a></div>
           <br><div class="pretty medium default btn icon-right icon-video centered"><a href="#">Ajouter media</a></div>
           <fieldset id="cadre-option" class="centered">
               <legend >Avis :</legend>
-              <ul class="field">
-                <li><input class="input textarea" id="text1" type="text" placeholder="auteur 1" /></li>
+              <ul class="field" id="ulAvis">
+                <li><div class="pretty medium default btn icon-right icon-plus-circled centered wide"><a href="#">Ajouter</a></div></li>
+                <!-- <li><input class="input textarea" id="text1" type="text" placeholder="auteur 1" /></li> -->
               </ul>
           </fieldset>
           <fieldset id="cadre-option" class="centered">
               <legend>Localisation :</legend>
-                      <ul>
+              <ul>
 
-            <li class="field">
-              <input class=" text input narrow" id="text1" type="text" placeholder="Long" />
-              <input class=" text input narrow" id="text1" type="text" placeholder="Lat" />
-              <br><br><div class="pretty medium default btn icon-right centered"><a href="#">Valider</a></div>
-            </li>              
+              <li class="field">
+                <input class=" text input narrow" id="text1" type="text" placeholder="Long" />
+                <input class=" text input narrow" id="text1" type="text" placeholder="Lat" />
+                <br><br><div class="pretty medium default btn icon-right centered"><a href="#">Valider</a></div>
+              </li>              
             
-        </ul>
+              </ul>
           </fieldset>
           <div id="div_carte"></div>
         
@@ -108,8 +116,13 @@
       </div>
   
     
-      
-      
+    <p class="btn danger medium">
+        <a class="switch active" href="#">Annuler</a>
+    </p>       
+    <p class="btn primary medium">
+        <a class="switch active" href="#">Envoyer</a>
+    </p>     
+ 
   </form>
 </div>
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>

@@ -54,11 +54,26 @@
         </src>
       </image>        
     </images>
-    <medias/>
+    <medias>
+      <media>
+        <description>
+        </description>
+        <auteur>       
+        </auteur>  
+        <src>
+        </src>
+      </media>
+      <media>
+        <description>
+        </description>
+        <auteur>      
+        </auteur>  
+        <src>       
+        </src>
+      </media>      
+    </medias>
     <avis>
-        <note>
-          Ca fait penser à starWars
-        </note>
+        <note>Ca fait penser à starWars</note>
         
         <personne>
             <nom>
@@ -134,12 +149,44 @@
       <personne/>
     </collectage>
     <refConteType>refConteType</refConteType>
-    <images/>
-    <medias/>
+    <images>
+      <image>
+        <description>
+        </description>
+        <auteur>       
+        </auteur>  
+        <src>
+        </src>
+      </image>
+      <image>
+        <description>
+        </description>
+        <auteur>      
+        </auteur>  
+        <src>       
+        </src>
+      </image>        
+    </images>
+    <medias>
+      <media>
+        <description>
+        </description>
+        <auteur>       
+        </auteur>  
+        <src>
+        </src>
+      </media>
+      <media>
+        <description>
+        </description>
+        <auteur>      
+        </auteur>  
+        <src>       
+        </src>
+      </media>      
+    </medias>
     <avis>
-        <note>
-          Ca fait penser à starWars
-        </note>
+        <note>Ca fait penser à starWars</note>
         
         <personne>
             <nom>
@@ -200,12 +247,44 @@
       <personne/>
     </collectage>
     <refConteType>refConteType</refConteType>
-    <images/>
-    <medias/>
+    <images>
+      <image>
+        <description>
+        </description>
+        <auteur>       
+        </auteur>  
+        <src>
+        </src>
+      </image>
+      <image>
+        <description>
+        </description>
+        <auteur>      
+        </auteur>  
+        <src>       
+        </src>
+      </image>        
+    </images>
+    <medias>
+      <media>
+        <description>
+        </description>
+        <auteur>       
+        </auteur>  
+        <src>
+        </src>
+      </media>
+      <media>
+        <description>
+        </description>
+        <auteur>      
+        </auteur>  
+        <src>       
+        </src>
+      </media>        
+    </medias>
     <avis>
-        <note>
-          Ca fait penser à starWars
-        </note>
+        <note>Ca fait penser à starWars</note>
         
         <personne>
             <nom>
