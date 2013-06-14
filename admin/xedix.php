@@ -6,43 +6,44 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 ini_set('error_reporting', E_ALL);
 /**
 
-    Ce fichier permet de récupérer des élements XML depuis la base de données XEDIX ROXOR du Poney.
-    En foonction du contenu de la variable id de type GET on redirige vers la méthode à appliquer. 
+    Ce fichier permet de rÃ©cupÃ©rer des Ã©lements XML depuis la base de donnÃ©es XEDIX ROXOR du Poney.
+    En foonction du contenu de la variable id de type GET on redirige vers la mÃ©thode Ã  appliquer. 
 
 */
 
 
 /**
 
-Méthode qui récupère tous les utilisateurs
+MÃ©thode qui rÃ©cupÃ¨re tous les utilisateurs
 renvoit un arbre XML contenant tous les utilisateurs. 
 
 */
 function getAllUsers(){
     header("Content-Type:text/xml");
-    //echo file_get_contents("http://82.234.92.81:5225/cgi-bin/client?X2xsearch+7+login=Robin&pwd=854895+search="(id,titre,auteur,dateDerniereModif,etat,refSmf)<DANS>Conte"&display=XML); //on inteprete coté client l'écho comme un retour normal. 
+    //echo file_get_contents("http://82.234.92.81:5225/cgi-bin/client?X2xsearch+7+login=Robin&pwd=854895+search="(id,titre,auteur,dateDerniereModif,etat,refSmf)<DANS>Conte"&display=XML); //on inteprete cotÃ© client l'Ã©cho comme un retour normal. 
     echo file_get_contents("http://localhost/Mitho/admin/personne.xml");
 }
 
 
 /**
 
-Méthode qui récupère tous les élements publiés
-renvoit un arbre XML contenant tous les contenus publiés. 
+MÃ©thode qui rÃ©cupÃ¨re tous les Ã©lements publiÃ©s
+renvoit un arbre XML contenant tous les contenus publiÃ©s. 
 
 */
 function getAllPublished(){
-    // C'est peut être complètement faux mais j'essaie
+    // C'est peut Ãªtre complÃ¨tement faux mais j'essaie
     header("Content-Type:text/xml");
-    //echo file_get_contents("http://82.234.92.81:5225/cgi-bin/client?X2xsearch+7+login=Robin&pwd=854895+search="(id,titre,auteur,dateDerniereModif,etat,refSmf)<DANS>Conte"&display=XML); //on inteprete coté client l'écho comme un retour normal. 
+    //echo file_get_contents("http://82.234.92.81:5225/cgi-bin/client?X2xsearch+7+login=Robin&pwd=854895+search="(id,titre,auteur,dateDerniereModif,etat,refSmf)<DANS>Conte"&display=XML); //on inteprete cotÃ© client l'Ã©cho comme un retour normal. 
     echo file_get_contents("http://localhost/Mitho/admin/contes.xml");
     //echo file_get_contents("http://82.234.92.81:5225/cgi-bin/client?X2XSearch+7+".$_SESSION['idSession']."+allrequest=");
-    // Je veux récupérer l'id l'auteur...
+    // Je veux rÃ©cupÃ©rer l'id l'auteur...
 }
 /**
-    Recupère un conte en particulier. En prenant l'id passé en param $_GET['id']
+    RecupÃ¨re un conte en particulier. En prenant l'id passÃ© en param $_GET['id']
 */
 function getPublishedContent(){
+    // C'est peut Ãªtre complÃ¨tement faux mais j'essaie
     header("Content-Type:text/xml");
     echo file_get_contents("http://localhost/Mitho/admin/contes.xml");
 
@@ -50,7 +51,7 @@ function getPublishedContent(){
 
 
 /**
-    Méthode d'authentification qui set l'id de session
+    MÃ©thode d'authentification qui set l'id de session
 */
 function auth(){
     $mdp = "";
@@ -75,6 +76,7 @@ function auth(){
     $dom = new DomDocument();
     $dom->loadXML($return);
     $erreur = $dom->getElementsByTagName('erreur');
+    $result = "";
     foreach($erreur as $e){
         $result = $e->nodeValue;
     }
