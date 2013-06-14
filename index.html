@@ -26,13 +26,14 @@
 <div class="navbar" id="nav1" gumby-fixed="top" gumby-end="500">
     <div class="row">
       <a class="toggle" gumby-trigger=".navbar > .row > ul" href="#"><i class="icon-menu"></i></a>
-      <h3 class="four columns logo" style="font-family:titre !important; color : white">Mythologie Français</h3>
+      <h3 class="four columns logo" style="font-family:titre !important; color : white">Mythologie Française</h3>
       <ul class="eight columns" >
         <li ><a href="index.html">Rechercher</a></li>
         <li><a href="société.html" >Société</a></li>
         <li><a href="?page=utilisateurs" >Commission atlass</a></li>
         <li><a href="carte.html" >Carte</a></li>
         <li><a href="index_contact.html">Contact</a></li>
+
       </ul>
     </div>
   </div>
@@ -45,7 +46,7 @@
 				<div class="eight columns">
 					<ul>
 					<li class="field">
-						<input class="search input" type="searcg" placeholder="Mot clé, résumé, commune, lieu dit, code STITH ...">
+						<input id="input_recherche" class="search input" type="searcg" placeholder="Mot clé, résumé, commune, lieu dit, code STITH ...">
 						
 					</li>
 				</ul>
@@ -97,136 +98,34 @@
 <!--------------------------------Fin Option de recherhce -------------------------------------->	
 <div id="resultat-recherche">
 	<div class="row">
-		<div class="sixteen columns">
-			Résultats : 2<br>
+		<div id="nbResult" class="sixteen columns">
+		
 		</div>
 	</div>
-
-	
-		<div class="container">
-
-			<div class="sixteen colgrid">
-				<div class="choixlist">
-					<div class="row">
-						<div class="sixteen columns">
-							<div class="bordure"></div><br>
-						</div>
-					</div>
-					
-					<div class="row">
-						<div class="two columns bold">
-							<b>Code Stith :</b>
-						</div>
-						<div class="eight columns">
-							<p>Code Stist 1, Code stist 2, code Stist 3</p>
-						</div>
-						<div class="two columns bold">
-							<b>Commune :</b>
-						</div>
-						<div class="four columns">
-							<p>Reviers, Basse-Normandie, France<p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="two columns bold">
-							<b>Titre :</b>
-						</div>
-						<div class="eight columns">
-							<p>le loup et le rat</p>
-						</div>
-						<div class="four columns bold">
-							<b>Dernière modification :</b>
-						</div>
-						<div class="two columns">
-							<p>18/5/2013<p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="two columns bold">
-							<b>Résumé :</b>
-						</div>
-						<div class="ten columns">
-							<p>le loup et le rat sont des amis depuis toujours ...</p>
-						</div>
-		
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	
-		<div class="container">
-
-			<div class="sixteen colgrid">
-				<div class="choixlist">
-					<div class="row">
-						<div class="sixteen columns">
-							<div class="bordure"></div><br>
-						</div>
-					</div>
-					
-					<div class="row">
-						<div class="two columns bold">
-							<b>Code Stist :</b>
-						</div>
-						<div class="eight columns">
-							<p>Code Stist 1, Code stist 2, code Stist 3</p>
-						</div>
-						<div class="two columns bold">
-							<b>Commune :</b>
-						</div>
-						<div class="four columns">
-							<p>Reviers, Basse-Normandie, France<p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="two columns bold">
-							<b>Titre :</b>
-						</div>
-						<div class="eight columns">
-							<p>le loup et le rat</p>
-						</div>
-						<div class="four columns bold">
-							<b>Dernière modification :</b>
-						</div>
-						<div class="two columns">
-							<p>18/5/2013<p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="two columns bold">
-							<b>Résumé :</b>
-						</div>
-						<div class="ten columns">
-							<p>le loup et le rat sont des amis depuis toujours ...</p>
-						</div>
-		
-					</div>
-					
-				</div>
-			</div>
-		</div>
-
+		<div id="test_conte"></div>
 	</div>
 
-<br><br><br><br><br><br><br>
+<br><br><br><br><br>
   <footer>
-    <a href="admin">Administration</a><br>
+    <a href="admin/auth/index.php">Administration</a><br>
       Copyright &copy; 2013
   </footer>
   <!-- JavaScript at the bottom for fast page loading -->
   <script src="js/libs/modernizr-2.6.2.min.js"></script>
   	<link href="css/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
-
+	<link href="css/lightbox.css" rel="stylesheet" />
 	<script src="js/libs/jquery-1.9.1.js"></script>
+		<script src="js/libs/jquery-1.8.3.min.js"></script>
 	<script src="js/libs/jquery-ui-1.10.3.custom.js"></script>
+
 	
 
-
+  <script src="js/lightbox.js"></script>
   <script src="js/libs/gumby.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-  
+ <!-- <script src="js/main.js"></script>-->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
   <script type="text/javascript"> 
 
 	$(document).ready(function ()
@@ -234,9 +133,9 @@
 	
 		$("#cadre-option").hide();
 		$("#resultat-recherche").hide();
-		$("#date-collect").datepicker();
-		
-		
+		//$("#date-collect").datepicker();
+		var lieuTempo;
+
 
 		    $("#commune").autocomplete({     
 				source: function( request, response ) {      
@@ -290,13 +189,234 @@
 		
 		});
 		
+
+	  
+	  
 		$("#rechercher").click(function (){
-			$("#resultat-recherche").show(1000);
+		
+			$("#test_conte").html("");
+			var nbResult=0;
+			$("#resultat-recherche").hide(300);
+	  		$.ajax( {
+				type: "GET",
+				url: "admin/contes.xml",
+				dataType: "xml",
+				success : function(xml){
+					
+					
+					$(xml).find('Conte').each(function(){
+					
+						if($(this).text().search($("#input_recherche").val())!="-1")
+						{
+							nbResult++;
+							var titre = $(this).find('titre').text();
+							var resume = $(this).find('resume').text();
+							var lieu = $(this).find('lieu').find('ville').text()+", "+$(this).find('lieu').find('region').text()+", "+$(this).find('lieu').find('pays').text();
+							
+							var refStithFr = $(this).find('refStith').find('code').text();
+							var refStithFn = $(this).find('refStith').find('libAnglais').text();
+							var refSmf = $(this).find('refSmf').text();
+							var refConteType = $(this).find('refConteType').text();
+							var refBiblio = $(this).find('refBiblio').find('nomBiblio').text()+" ( "+$(this).find('refBiblio').find('auteursBiblio').find('personne').text()+" ) : "+$(this).find('refBiblio').find('dateEditionBilbio').text();
+							
+							var id = $(this).find('id').text();
+					
+							var auteurAvis = $(this).find('avis').find('personne').find('prenom').text()+" "+$(this).find('avis').find('personne').find('nom').text();
+							var noteAvis = $(this).find('avis').find('note').text();
+							var dateCollectage = $(this).find('dateCollectage').attr('anneeCollectage');
+							var dateDerniereModif = $(this).find('dateDerniereModif').attr('jourDerniereModif') +"/"+$(this).find('dateDerniereModif').attr('moisDerniereModif') +"/"+$(this).find('dateDerniereModif').attr('anneeDerniereModif');
+							var dateCreation = $(this).find('dateCreation').attr('jourCreation') +"/"+$(this).find('dateCreation').attr('moisCreation') +"/"+$(this).find('dateCreation').attr('anneeCreation');
+							var etatXml = $(this).find('etat').text();
+							
+							var textconte ='<div class="container" onclick=afficherConte("'+id+'")><div class="sixteen colgrid"><div class="choixlist"><div class="row"><div class="sixteen columns"><div class="bordure"></div><br></div></div><div class="row"><div class="two columns bold">'
+									+'<b>Code Stith :</b>'
+								+'</div><div class="eight columns">'
+									+'<p>'+refStithFr+'</p>'
+								+'</div>'
+								+'<div class="two columns bold">'
+									+'<b>Commune :</b>'
+								+'</div>'
+								+'<div class="four columns">'
+									+'<p>'+lieu+'<p>'
+								+'</div>'
+							+'</div>'
+							+'<div class="row">'
+								+'<div class="two columns bold">'
+									+'<b>Titre :</b>'
+								+'</div>'
+								+'<div class="eight columns">'
+									+'<p>'+titre+'</p>'
+								+'</div>'
+								+'<div class="four columns bold">'
+									+'<b>Dernière modification :</b>'
+								+'</div>'
+								+'<div class="two columns">'
+									+'<p>'+dateDerniereModif+'<p>'
+								+'</div>'
+							+'</div>'
+							+'<div class="row">'
+								+'<div class="two columns bold">'
+									+'<b>Résumé :</b>'
+								+'</div>'
+								+'<div class="ten columns">'
+									+'<p>'+resume+'</p>'
+								+'</div></div></div></div></div>';
+							
+							
+							$("#test_conte").append(textconte);
+							$("#resultat-recherche").show(1000);
+						}
+						
+					});
+					
+					$("#nbResult").html("Résultats : "+nbResult+"<br>" );
+
+					
+					if ($("#test_conte").html()=="")
+					{
+					
+						$("#test_conte").html('<br><br><div class="row"><div class="centered ten columns"><h3>Aucun rélutat trouvé correspondant à votre recherche</h3></div></div>');
+					}
+						 
+					},
+					error: function (error) {
+						console.log("erreur");
+					}
+			});
+	 
 		});
-	  
-	  
+		
+		
 	});
 	
+	
+	
+	function afficherConte(idconte){
+		
+			$("#nbResult").html("");
+	  		$.ajax( {
+				type: "GET",
+				url: "admin/contes.xml",
+				dataType: "xml",
+				success : function(xml){
+					
+					$("#resultat-recherche").hide(300);
+					$(xml).find('Conte').each(function(){
+					
+						if($(this).find('id').text()==idconte)
+						{
+							
+							var titre = $(this).find('titre').text();
+							var resume = $(this).find('resume').text();
+							var lieu = $(this).find('lieu').find('ville').text()+", "+$(this).find('lieu').find('region').text()+", "+$(this).find('lieu').find('pays').text();
+							lieuTempo=lieu;
+							var refStithFr = $(this).find('refStith').find('code').text();
+							var refStithEn = $(this).find('refStith').find('libAnglais').text();
+							var refSmf = $(this).find('refSmf').text();
+							var refConteType = $(this).find('refConteType').text();
+							var refBiblio = $(this).find('refBiblio').find('nomBiblio').text()+" ( "+$(this).find('refBiblio').find('auteursBiblio').find('personne').text()+" ) : "+$(this).find('refBiblio').find('dateEditionBilbio').text();
+							
+							var id = $(this).find('id').text();
+					
+							var auteurAvis = $(this).find('avis').find('personne').find('prenom').text()+" "+$(this).find('avis').find('personne').find('nom').text();
+							var noteAvis = $(this).find('avis').find('note').text();
+							var dateCollectage = $(this).find('dateCollectage').attr('anneeCollectage');
+							var dateDerniereModif = $(this).find('dateDerniereModif').attr('jourDerniereModif') +"/"+$(this).find('dateDerniereModif').attr('moisDerniereModif') +"/"+$(this).find('dateDerniereModif').attr('anneeDerniereModif');
+							var dateCreation = $(this).find('dateCreation').attr('jourCreation') +"/"+$(this).find('dateCreation').attr('moisCreation') +"/"+$(this).find('dateCreation').attr('anneeCreation');
+							var etatXml = $(this).find('etat').text();
+							
+							var textconte ='<div class="container"><div class="row"><div class="six columns  ">'
+							+'<span class="bold">Code SMF : </span>  </b>'+refSmf
+							+'</div><div class="push_two  columns ">Dernière modification : '+dateDerniereModif+'</div></div></div>'
+							+'<div class="sixteen colgrid">'
+								+'<form>'
+										+'<div class="row">'
+											+'<div class="ten columns">'
+												+'<h3 class="lead">'+titre+'</h3>'
+												+'<div align="right" size="1" class="bordure">Date de collectage : '+dateCollectage+'</div>'
+												+'<fieldset id="cadre-option" class="centered">'
+													+'<legend>Résumé</legend>'
+														+'<p>'+resume+' </p>'
+												+'</fieldset>'
+												+'<fieldset id="cadre-option" class="centered">'
+													+'<legend>Texte d\'origine</legend>'
+														+'<p>Voici le  texte d\'origine</p>'
+												+'</fieldset>'
+												+'<li class="default alert">Conte type : '+refConteType+'</li>'
+												+'<fieldset id="cadre-option" class="centered">'
+														+'<legend>Code Stith (Anglais)</legend>'
+														+'<p>'+refStithEn+'</p>'
+												+'</fieldset>'
+												+'<fieldset id="cadre-option" class="centered">'
+														+'<legend>Code Stith (français)</legend>'
+														+'<p>'+refStithFr+'</p>'
+												+'</fieldset>'
+												+'<h5 class="lead">Référence Bibliographique :</h5>'
+												+'<ul class="disc">'
+													+'<li>* '+refBiblio+'</li>'
+													
+												+'</ul>'
+											+'</div>'
+											+'<div class="push_one  five columns">'
+												+'<br><img src="images/img-comte.jpg"/>'
+												+'<br><div class="pretty medium default btn icon-right icon-camera centered"><a href="images/01_centaure.jpg" rel="lightbox[roadtrip]">Images</a></div>'
+												+'<a href="images/01_dragon.jpg" style="display:none;" rel="lightbox[roadtrip]"></a>'
+												+'<a href="images/01mlph.jpg" style="display:none;" rel="lightbox[roadtrip]"></a>'
+												+'<fieldset id="cadre-option" class="centered">'
+														+'<legend>Avis :</legend>'
+														+'<li>'+auteurAvis+' : '+noteAvis+' </li>'
+												+'</fieldset>'
+												+'<div id="div_carte"></div>'
+												+'<span class="bold">Commune : </span>'+lieu
+											+'</div></div></form></div>';
+							
+							
+							
+							
+							$("#test_conte").html(textconte);
+							$("#resultat-recherche").show(1000);
+							initCarte(); 
+							
+						}
+						
+					});
+			 
+					},
+					error: function (error) {
+						console.log("erreur");
+					}
+			});
+		
+			
+		
+		};
+		
+		
+		function initCarte(){ 
+
+			var myLatlng = new google.maps.LatLng( 	48.86963, 2.31659);
+			var oMap = new google.maps.Map( $( '#div_carte')[0],{ 
+				'center' : myLatlng, 
+				'zoom' : 10, 
+				'mapTypeId' : google.maps.MapTypeId.ROADMAP 
+				}); 
+				var geocoder = new google.maps.Geocoder();
+				
+				geocoder.geocode( { 'address': lieuTempo}, function(results, status) {
+				  if (status == google.maps.GeocoderStatus.OK) {
+					oMap.setCenter(results[0].geometry.location);
+					var marker = new google.maps.Marker({
+						map: oMap,
+						position: results[0].geometry.location
+					});
+				  } else {
+					alert("Geocode was not successful for the following reason: " + status);
+				  }});
+
+				
+				
+			//	var marker = new google.maps.Marker({      position: myLatlng,      map: oMap,      title:"Hello World!"  });
+		} ;
 	
   
     </script>
