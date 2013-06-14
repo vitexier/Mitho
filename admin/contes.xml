@@ -6,24 +6,24 @@
     <titre>Le diable rouge</titre>
     <resume>Un diable qui est rouge ! Dans une galaxy très très lointaine.</resume>
     <lieu>
-      <pays></pays>
+      <pays>France</pays>
       <region>Ile de france</region>
       <departement>75</departement>
       <canton></canton>
-      <cp></cp>
-      <ville></ville>
+      <cp>75015</cp>
+      <ville>paris</ville>
       <adresse>
         <numero></numero>
         <rue></rue>
       </adresse>
-      <lieuDit></lieuDit>
+      <lieuDit>place de la marre</lieuDit>
       <coordonnees latitude="99" longitude="99"/>
     </lieu>
     <refStith>
-      <code>234F</code>
+      <code>RefStirh234F</code>
       <libAnglais>Devils</libAnglais>
     </refStith>
-    <refSmf>4699546146146</refSmf>
+    <refSmf>RefSmf4699546146146</refSmf>
     <collectage final="oui">
       <dateCollectage anneeCollectage="1999"/>
       <refBiblio>
@@ -35,7 +35,7 @@
       </refBiblio>
       <personne/>
     </collectage>
-    <refConteType>1</refConteType>
+    <refConteType>Ref compte type 45454545</refConteType>
     <images>
       <image>
         <description>
@@ -54,26 +54,11 @@
         </src>
       </image>        
     </images>
-    <medias>
-      <media>
-        <description>
-        </description>
-        <auteur>       
-        </auteur>  
-        <src>
-        </src>
-      </media>
-      <media>
-        <description>
-        </description>
-        <auteur>      
-        </auteur>  
-        <src>       
-        </src>
-      </media>      
-    </medias>
+    <medias/>
     <avis>
-        <note>Ca fait penser à starWars</note>
+        <note>
+          Ca fait penser à starWars
+        </note>
         
         <personne>
             <nom>
@@ -104,12 +89,12 @@
     <titre>Diable noir</titre>
     <resume>Cette fois le diable était noir !</resume>
     <lieu>
-      <pays></pays>
-      <region></region>
+      <pays>France</pays>
+      <region>Normandie</region>
       <departement>91</departement>
       <canton></canton>
       <cp></cp>
-      <ville></ville>
+      <ville>Reviers</ville>
       <adresse>
         <numero></numero>
         <rue></rue>
@@ -149,44 +134,12 @@
       <personne/>
     </collectage>
     <refConteType>refConteType</refConteType>
-    <images>
-      <image>
-        <description>
-        </description>
-        <auteur>       
-        </auteur>  
-        <src>
-        </src>
-      </image>
-      <image>
-        <description>
-        </description>
-        <auteur>      
-        </auteur>  
-        <src>       
-        </src>
-      </image>        
-    </images>
-    <medias>
-      <media>
-        <description>
-        </description>
-        <auteur>       
-        </auteur>  
-        <src>
-        </src>
-      </media>
-      <media>
-        <description>
-        </description>
-        <auteur>      
-        </auteur>  
-        <src>       
-        </src>
-      </media>      
-    </medias>
+    <images/>
+    <medias/>
     <avis>
-        <note>Ca fait penser à starWars</note>
+        <note>
+          Ca fait penser à starWars
+        </note>
         
         <personne>
             <nom>
@@ -247,44 +200,12 @@
       <personne/>
     </collectage>
     <refConteType>refConteType</refConteType>
-    <images>
-      <image>
-        <description>
-        </description>
-        <auteur>       
-        </auteur>  
-        <src>
-        </src>
-      </image>
-      <image>
-        <description>
-        </description>
-        <auteur>      
-        </auteur>  
-        <src>       
-        </src>
-      </image>        
-    </images>
-    <medias>
-      <media>
-        <description>
-        </description>
-        <auteur>       
-        </auteur>  
-        <src>
-        </src>
-      </media>
-      <media>
-        <description>
-        </description>
-        <auteur>      
-        </auteur>  
-        <src>       
-        </src>
-      </media>        
-    </medias>
+    <images/>
+    <medias/>
     <avis>
-        <note>Ca fait penser à starWars</note>
+        <note>
+          Ca fait penser à starWars
+        </note>
         
         <personne>
             <nom>
