@@ -7,6 +7,7 @@ var redactionClick = 0;
 var moderationClick = 0;
 var publishClick = 0;
 
+
 var etat = {
 		NOTPUBLISH : "NP",
 		PUBLISHED : "P",
@@ -19,6 +20,7 @@ function displayContent(id){
 	window.location = "?page=editContenu&id="+id;
 }
 
+	 
 /**
  * Fonction de récupération des paramètres GET de la page
  * @return Array Tableau associatif contenant les paramètres GET
@@ -506,7 +508,39 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 
 	});
 
+	$("#carte").ready(function(){
+		initialiser();
 
-
+	});
 
 });
+
+	function initialiser() {
+	 	console.log("test");
+		var latlng = new google.maps.LatLng(48.853, 2.35);
+		//objet contenant des propriétés avec des identificateurs prédéfinis dans Google Maps permettant
+		//de définir des options d'affichage de notre carte
+		var options = {
+		center: latlng,
+		zoom: 2,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		//constructeur de la carte qui prend en paramêtre le conteneur HTML
+		//dans lequel la carte doit s'afficher et les options
+		var carte = new google.maps.Map(document.getElementById("carte"), options);
+		
+		 /****************Nouveau code****************/
+		 //création du marqueur
+		 new google.maps.Marker({
+		 position: new google.maps.LatLng(48.853, 2.35),
+		 map: carte,
+		 title: 'Hello World!'
+		 });
+		 
+		 new google.maps.Marker({
+		 position: new google.maps.LatLng(47, 2),
+		 map: carte,
+		 title: 'Hello World!'
+		 });
+		 /********************************************/
+		}
