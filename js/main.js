@@ -20,6 +20,11 @@ function displayContent(id){
 	window.location = "?page=editContenu&id="+id;
 }
 
+function displayUser(pseudo){
+
+	window.location = "?page=editUtilisateur&pseudo="+pseudo;
+}
+
 	 
 /**
  * Fonction de récupération des paramètres GET de la page
@@ -231,9 +236,9 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 					var adresse = $(this).find('codePostale').text();
 					var email = $(this).find('email').text();
 					var role = $(this).find('role').text();
-					var action = "</i><i class='icon-cancel'></i><i class='icon-check'></i>";
+					var action = "<i class='icon-cancel'></i><i class='icon-check'></i><i class='icon-pencil' onclick='displayUser(\"" +pseudo+ "\");'></i>";
 
-					$("#tabUsers").append("<tr><td>"+pseudo+"</td><td>"+nom+"</td><td>"+prenom+"</td><td>"+adresse+"</td><td>"+email+"</td><td>"+role+"</td></td><td>"+action+"</td></tr>");
+					$("#tabUsers").append("<tr><td>"+pseudo+"</td><td>"+nom+"</td><td>"+prenom+"</td><td>"+adresse+"</td><td>"+email+"</td><td>"+role+"</td></td><td width='110'>"+action+"</td></tr>");
 
 				});
 
@@ -246,6 +251,42 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 			}
 		});
 	});
+	
+	$("#editUser").ready(function(){
+		var pseudoP = getParamValue("pseudo",document.location.href);
+		if(pseudoP !== ""){
+			$.ajax( {
+				type: "GET",
+				url: "/Mitho/admin/xedix.php?id=3",
+				dataType: "xml",
+				success : function(xml){
+					//console.log(xml);
+
+					$(xml).find('personne').each(function(){
+						var pseudo = $(this).find('pseudo').text();
+						if(pseudo === pseudoP){
+							var prenom = $(this).find('prenom').text();
+							var nom = $(this).find('nom').text();
+							var mail = $(this).find('email').text();
+							var cp = $(this).find('codePostale').text();
+							var role = $(this).find('role').text();
+							$("#pseudo").attr("value", pseudo);
+							$("#prenom").attr("value", prenom);
+							$("#nom").attr("value", nom);
+							$("#mail").attr("value", mail);
+							$("#codePostal").attr("value", cp);
+							$("#role").attr("value", role);								
+						}
+					});
+				},
+				error: function (error) {
+					console.log("erreur");
+				}
+			});
+		}
+
+	});
+	
 	$("#admins").click(function(){
 		if (adminFilter=== false) {
 			console.log("start filter");
