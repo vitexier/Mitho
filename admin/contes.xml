@@ -100,7 +100,7 @@
         <rue></rue>
       </adresse>
       <lieuDit></lieuDit>
-      <coordonnees latitude="41.920" longitude="91.388"/>
+      <coordonnees latitude="48.853" longitude="2.38"/>
     </lieu>
     <refStith>
       <code>4231</code>
@@ -181,7 +181,7 @@
         <rue></rue>
       </adresse>
       <lieuDit></lieuDit>
-      <coordonnees latitude="36" longitude="36"/>
+      <coordonnees latitude="48.853" longitude="2.40"/>
     </lieu>
     <refStith>
       <code>code</code>
