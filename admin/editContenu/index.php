@@ -38,9 +38,7 @@
               </li>              
               
           </ul>
-            
-
-
+ 
           </div>
           <fieldset id="cadre-option" class="centered">
             <legend>Résumé</legend>
@@ -68,7 +66,7 @@
           <fieldset id="cadre-option" class="centered">
               <legend>Code Stith (Anglais)</legend>
               <ul class="field" id="ulStithEn">
-                <li><div class="pretty medium default btn icon-right icon-plus-circled centered"><a href="#">Ajouter</a></div></li>
+                <li><div class="pretty medium default btn icon-right icon-plus-circled centered" id="addStithEn"><a  id="addStithEn">Ajouter</a></div></li>
                 <!--<li><p>Code Stith 1 ,Code Stith 2 , Code Stith 3, Code Stith 4, Code Stith 5, Code Stith 5</p></li>-->
               </ul>
               
@@ -76,24 +74,34 @@
           <fieldset id="cadre-option" class="centered">
               <legend>Code Stith (français)</legend>
               <ul class="field" id="ulStithFr">
-                <li><div class="pretty medium default btn icon-right icon-plus-circled centered"><a href="#">Ajouter</a></div></li>
+                <li><div class="pretty medium default btn icon-right icon-plus-circled centered"><a id="addStithFr">Ajouter</a></div></li>
                 <!--<li><p>Code Stith 1 ,Code Stith 2 , Code Stith 3, Code Stith 4, Code Stith 5, Code Stith 5</p></li>-->
               </ul>
           </fieldset>
           <h5 class="lead bold ">Référence Bibliographique :</h5>
               <ul class="field" id="ulBiblio">
-                <li><div class="pretty medium default btn icon-right icon-plus-circled centered"><a href="#">Ajouter</a></div></li>
+                <li><div class="pretty medium default btn icon-right icon-plus-circled centered"><a id="addBiblio">Ajouter</a></div></li>
                 <!--<li><p>Code Stith 1 ,Code Stith 2 , Code Stith 3, Code Stith 4, Code Stith 5, Code Stith 5</p></li>-->
               </ul>
         </div>
         <div class="push_one  five columns">
-          
-          <br><div class="pretty medium default btn icon-right icon-camera centered "><a href="#">Ajouter image</a></div>
-          <br><div class="pretty medium default btn icon-right icon-video centered"><a href="#">Ajouter media</a></div>
+            <ul class="field" id="divImages">
+                <li><div class="pretty medium default btn icon-right icon-camera centered " ><a id="addImage">Ajouter image</a></div></li>
+                <!-- <li><input class="input textarea" id="text1" type="text" placeholder="auteur 1" /></li> -->
+            </ul>
+            <ul class="field" id="divVideos">
+                <li><div class="pretty medium default btn icon-right icon-video centered"><a id="addVideo">Ajouter media</a></div></li>
+                <!-- <li><input class="input textarea" id="text1" type="text" placeholder="auteur 1" /></li> -->
+            </ul>    
+             <ul class="field" id="ulAvis">
+                <li><div class="pretty medium default btn icon-right icon-plus-circled centered wide"><a id="addAvis">Ajouter</a></div></li>
+                <!-- <li><input class="input textarea" id="text1" type="text" placeholder="auteur 1" /></li> -->
+              </ul>
+            
           <fieldset id="cadre-option" class="centered">
               <legend >Avis :</legend>
               <ul class="field" id="ulAvis">
-                <li><div class="pretty medium default btn icon-right icon-plus-circled centered wide"><a href="#">Ajouter</a></div></li>
+                <li><div class="pretty medium default btn icon-right icon-plus-circled centered wide"><a id="addAvis">Ajouter</a></div></li>
                 <!-- <li><input class="input textarea" id="text1" type="text" placeholder="auteur 1" /></li> -->
               </ul>
           </fieldset>

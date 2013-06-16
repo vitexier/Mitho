@@ -107,6 +107,31 @@ $(window).resize(function () {
 
 });
 
+	$("#addStithEn").click(function(){
+		$("#ulStithEn").prepend("<li><input class='input textarea' type='text' placeholder='Stith Anglais'/></li>");
+	});
+
+	$("#addStithFr").click(function(){
+		$("#ulStithFr").prepend("<li><input class='input textarea' type='text' placeholder='Stith Français'/></li>");
+	});
+
+
+	$("#addBiblio").click(function(){
+		$("#ulBiblio").prepend("<li>Nom Auteur : <input class='input textarea'  type='text' placeholder='Nom' > Prénom auteur : <input class='input textarea' type='text' placeholder='Prénom' >Date :<input class='input textarea' type='text' placeholder='date bibliographie'></li>");
+	});
+
+	$("#addAvis").click(function(){
+		$("#ulAvis").prepend("<li><input class='input textarea' type='text' placeholder='Texte'></li>");
+	});
+
+	$("#addImage").click(function(){
+		$("#divImages").prepend("<input class='input textarea' type='text' placeholder='Description'><a class='srcImage' >Source image</a><br/>");
+
+	});
+
+	$("#addVideo").click(function(){
+		$("#divVideos").prepend("<input class='input textarea' type='text' placeholder='Description'><a class='srcImage' >Source image</a><br/>");
+	});
 
 
 $("#editContent").ready(function(){
@@ -154,7 +179,7 @@ $("#editContent").ready(function(){
 		}else{
 			$.ajax( {
 				type: "GET",
-				url: "/Mitho/admin/xedix.php?id=1&login="+$('#login').val()+"&mdp="+$('#mdp').val(),
+				url: "http://localhost/Mitho/admin/xedix.php?id=1&login="+$('#login').val()+"&mdp="+$('#mdp').val(),
 				dataType: "xml",
 				success : function(xml){
 					console.log("sucess");
@@ -358,7 +383,7 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 							}
 
 							if(biblioNom !== ""){
-								$("#ulBiblio").prepend("<li>Nom : <input class='input textarea' id='text1' type='text' placeholder='auteur 1' value=\""+biblioNom+"\"/> Auteur :<input class='input textarea' id='text1' type='text' placeholder='auteur 1' value=\""+biblioAuteur+"\"/>Date :<input class='input textarea' id='text1' type='text' placeholder='date bibliographie'/></li>");
+								$("#ulBiblio").prepend("<li>Nom auteur : <input class='input textarea' id='text1' type='text' placeholder='auteur 1' value=\""+biblioNom+"\"/> Prénom auteur :<input class='input textarea' id='text1' type='text' placeholder='auteur 1' value=\""+biblioAuteur+"\"/>Date :<input class='input textarea' id='text1' type='text' placeholder='date bibliographie'/></li>");
 							}								
 
 						}
@@ -373,6 +398,8 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 				}
 			});
 		}
+
+
 
 	});
 
@@ -508,10 +535,7 @@ http://pckult.developpez.com/tutoriels/javascript/frameworks/jquery/lecture-fich
 
 	});
 
-	$("#carte").ready(function(){
-		initialiser();
 
-	});
 
 });
 

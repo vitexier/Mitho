@@ -81,7 +81,7 @@ function auth(){
         $result = $e->nodeValue;
     }
 
-    if(sizeof($result) > 0){
+    if(sizeof($result) > 1){
         
         echo "<erreur>".$result."</erreur>";
     }else {
